@@ -6,7 +6,7 @@ on:
       - main # Ajuste o nome da branch conforme necessário
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,5 +16,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          github_token: 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
+          publish_dir: . # Diretório raiz do seu projeto
