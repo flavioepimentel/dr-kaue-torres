@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: gh issue --repo ${{ github.repository }} create --title "Issue title" --body "Issue body"
+
       - name: Checkout repository
         uses: actions/checkout@v2
 
