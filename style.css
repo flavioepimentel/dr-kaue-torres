@@ -30,7 +30,7 @@
 /*----------------------------------------*/
 /*  1. About Area
 /*----------------------------------------*/
-/*.game-bg{position: relative; background: #FFF4E7; box-shadow: 0 0 4px 4px #ECECEC; height: 345px}*/
+/*.game-bg{position: relative; background: #FFf; box-shadow: 0 0 4px 4px #ECECEC; height: 345px}*/
 .about-video {
     position: relative;
     text-align: center;
@@ -87,7 +87,7 @@
 }
 
 .video-icon a i {
-    color: #FFF4E7;
+    color: #FFf;
     font-size: 60px;
 }
 
@@ -144,7 +144,7 @@
 }
 
 .single-img i {
-    color: #FFF4E7;
+    color: #FFf;
     font-size: 35px;
     z-index: 99;
     position: absolute;
@@ -168,12 +168,12 @@
 
 .single-img i:hover {
     color: #E5BA86;
-    background: #FFF4E7;
+    background: #FFf;
     transform: scale(1);
 }
 
 .single-content {
-    background: #FFF4E7;
+    background: #FFf;
 }
 
 .single-content h3 {
@@ -265,7 +265,7 @@ tr {
 
 td h4 {
     font-size: 13px;
-    color: #FFF4E7;
+    color: #FFf;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
@@ -274,7 +274,7 @@ td h4 {
 
 td p {
     font-size: 12px;
-    color: #FFF4E7;
+    color: #FFf;
     font-weight: 400;
     font-family: 'Lato', sans-serif;
     margin-bottom: 8px;
@@ -348,7 +348,7 @@ td.pink {
 }
 
 .trainer-hover h3 {
-    color: #FFF4E7;
+    color: #FFf;
     font-size: 20px;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
@@ -373,7 +373,7 @@ td.pink {
 
 .trainer-hover ul li {
     display: inline-block;
-    border: 12px solid #FFF4E7;
+    border: 12px solid #FFf;
     border-radius: 50%;
     height: 30px;
     width: 30px;
@@ -385,7 +385,7 @@ td.pink {
 
 .trainer-hover ul li a {
     font-size: 16px;
-    color: #FFF4E7;
+    color: #FFf;
     line-height: 28px;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
@@ -393,7 +393,7 @@ td.pink {
 }
 
 .trainer-hover ul li:hover {
-    background: #FFF4E7;
+    background: #FFf;
 }
 
 .trainer-hover ul li:hover a {
@@ -452,7 +452,7 @@ td.pink {
 
 .load a {
     background: #95652A;
-    color: #FFF4E7;
+    color: #FFf;
     text-transform: uppercase;
     padding: 5px 25px 4px;
     font-size: 14px;
@@ -477,7 +477,7 @@ td.pink {
 }
 
 .event-wrapper {
-    background: #FFF4E7;
+    background: #FFf;
     text-align: center;
     vertical-align: middle;
     display: table-cell;
@@ -497,7 +497,7 @@ td.pink {
     left: 30px;
     top: -20px;
     box-shadow: 0 0 4px 4px #ddd;
-    background: #FFF4E7;
+    background: #FFf;
     height: 100%;
     content: "";
     right: 30px;
@@ -603,7 +603,7 @@ td.pink {
 .single-table:hover .table-head h2,
 .single-table:hover .table-body ul li,
 .single-table:hover .table-body a {
-    color: #FFF4E7;
+    color: #FFf;
 }
 
 .single-table:hover .table-body ul li {
@@ -631,7 +631,7 @@ td.pink {
 }
 
 .table-head h1 {
-    background: #FFF4E7;
+    background: #FFf;
     font-size: 48px;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -705,7 +705,7 @@ td.pink {
 
 .single-testimonial {
     background: #D89D55 none repeat scroll 0 0;
-    color: #FFF4E7;
+    color: #FFf;
     margin: 50px 85px;
     padding: 48px 105px;
     position: relative;
@@ -769,7 +769,7 @@ td.pink {
 
 .newsletter-content h2 {
     font-size: 24px;
-    color: #FFF4E7;
+    color: #FFf;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
@@ -804,7 +804,7 @@ td.pink {
 }
 
 #mc-form .default-btn {
-    background: #FFF4E7 none repeat scroll 0 0;
+    background: #FFf none repeat scroll 0 0;
     border: medium none;
     color: #666666;
     font-family: "Montserrat", sans-serif;
@@ -825,7 +825,7 @@ td.pink {
 }
 
 #mc-form .default-btn:before {
-    background: #FFF4E7 none repeat scroll 0 0;
+    background: #FFf none repeat scroll 0 0;
     z-index: -1
 }
 

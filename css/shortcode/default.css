@@ -136,12 +136,12 @@ label {
 
 *::-moz-selection {
     background: #E5BA86;
-    color: #FFF4E7;
+    color: #FFF;
     text-shadow: none;
 }
 
 ::-moz-selection {
-    color: #FFF4E7;
+    color: #FFF;
     background: #E5BA86;
     text-shadow: none;
 }
@@ -149,7 +149,7 @@ label {
 ::selection {
     background: #E5BA86;
     text-shadow: none;
-    color: #FFF4E7;
+    color: #FFF;
 }
 
 .browserupgrade {
@@ -162,7 +162,7 @@ label {
 .mark,
 mark {
     background: #BD9058 none repeat scroll 0 0;
-    color: #FFF4E7;
+    color: #FFF;
     font-weight: 600;
 }
 
@@ -213,7 +213,7 @@ ul {
 
 .default-btn {
     background: transparent;
-    color: #FFF4E7;
+    color: #FFF;
     display: inline-block;
     font-size: 14px;
     font-weight: 700;
@@ -223,7 +223,7 @@ ul {
     position: relative;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
-    border: 1px solid #FFF4E7;
+    border: 1px solid #FFF;
     border-radius: 3px;
     z-index: 9;
     position: relative;
@@ -253,7 +253,7 @@ ul {
 .default-btn:hover span,
 .default-btn:focus span,
 .default-btn:active span {
-    color: #FFF4E7;
+    color: #FFF;
     border: none
 }
 
@@ -283,7 +283,7 @@ textarea {
     02. Text color
 *************************/
 .text-white {
-    color: #FFF4E7;
+    color: #FFF;
 }
 
 /*************************
@@ -324,7 +324,7 @@ select {
 }
 
 option {
-    background: #FFF4E7;
+    background: #FFF;
     border: 0px solid #626262;
     padding-left: 10px;
     font-size: 14px;
@@ -350,7 +350,7 @@ textarea {
     border-radius: 2px;
     bottom: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    color: #FFF4E7;
+    color: #FFF;
     font-size: 24px;
     height: 40px;
     line-height: 45px;
@@ -426,7 +426,7 @@ textarea {
 }
 
 #scrollUp i {
-    color: #FFF4E7;
+    color: #FFF;
 }
 
 #scrollUp {
@@ -1444,7 +1444,7 @@ textarea {
     09. Background variation set 
 **************************************/
 .bg-white {
-    background: #FFF4E7
+    background: #FFF
 }
 
 .bg-gray {
@@ -1509,7 +1509,7 @@ textarea {
     11. Pagination
 **************************************/
 .pagination-content .pagination li a {
-    background: #FFF4E7 none repeat scroll 0 0;
+    background: #FFF none repeat scroll 0 0;
     border: 1px solid #ebebeb;
     border-radius: 50%;
     color: #303030;
@@ -1562,7 +1562,7 @@ textarea {
 }
 
 .breadcrumb-bar li {
-    color: #FFF4E7;
+    color: #FFF;
     font-weight: 500;
     line-height: 14px;
     margin: 0 19px;
@@ -1571,7 +1571,7 @@ textarea {
 }
 
 .breadcrumb-bar .breadcrumb>li:first-child::before {
-    color: #FFF4E7;
+    color: #FFF;
     content: "//";
     display: inline-block;
     position: absolute;
@@ -1584,7 +1584,7 @@ textarea {
 }
 
 .breadcrumb-bar a {
-    color: #FFF4E7;
+    color: #FFF;
 }
 
 .breadcrumb-bar a:hover {
@@ -1634,7 +1634,7 @@ textarea {
 }
 
 .banner-content h2 {
-    color: #FFF4E7;
+    color: #FFF;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
@@ -1653,7 +1653,7 @@ textarea {
     text-transform: capitalize;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
-    color: #FFF4E7;
+    color: #FFF;
     -webkit-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
 }
