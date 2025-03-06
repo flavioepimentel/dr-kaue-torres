@@ -718,7 +718,7 @@ td.pink {
     width: 115px;
     border-radius: 50%;
     background: #D89D55;
-    box-shadow: 0 0 5px 0px #ababab;
+    box-shadow: 0 0 5px 0px #F2D7B7;
     left: -45px;
     top: -45px;
     content: "";
@@ -785,7 +785,7 @@ td.pink {
 }
 
 #mc-form>input {
-    color: #eaeaea;
+    color: #FFF4E7;
     font-size: 13px;
     margin-top: 20px;
     padding-left: 15px;
@@ -796,11 +796,11 @@ td.pink {
 }
 
 .newsletter-form input#mc-email::-moz-placeholder {
-    color: #eaeaea;
+    color: #FFF4E7;
 }
 
 .newsletter-form input[type="email"]::-webkit-input-placeholder {
-    color: #eaeaea;
+    color: #FFF4E7;
 }
 
 #mc-form .default-btn {
