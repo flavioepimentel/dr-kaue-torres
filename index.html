@@ -115,35 +115,100 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
+                    <style>
+                        .scrollable-paragraph {
+                            height: 270px;
+                            /* Defina a altura desejada */
+                            overflow-y: scroll;
+                            /* Permite a rolagem, mas não mostra a barra */
+                            direction: rtl;
+                            text-align: left;
+
+                        }
+
+                        /* Ocultando a barra de rolagem */
+                        .scrollable-paragraph::-webkit-scrollbar {
+                            display: none;
+                            /* Chrome, Safari e Opera */
+                        }
+
+                        .scrollable-paragraph {
+                            -ms-overflow-style: none;
+                            /* Internet Explorer 10+ */
+                            scrollbar-width: none;
+                            /* Firefox */
+                        }
+
+                        /* ----- Personalize a barra de rolagem ------- */
+                        .scrollable-paragraph::-webkit-scrollbar {
+                            width: 5px;
+                            /* Largura da barra de rolagem */
+                        }
+
+                        .scrollable-paragraph::-webkit-scrollbar-track {
+                            background: #f1f1f1;
+                            /* Cor do track */
+                        }
+
+                        .scrollable-paragraph::-webkit-scrollbar-thumb {
+                            background: #888;
+                            /* Cor do thumb */
+                            border-radius: 5px;
+                            /* Bordas arredondadas */
+                        }
+
+                        .scrollable-paragraph::-webkit-scrollbar-thumb:hover {
+                            background: #555;
+                            /* Cor do thumb ao passar o mouse */
+                        }
+
+                        .scrollable-paragraph {
+                            -ms-overflow-style: none;
+                            /* Internet Explorer 10+ */
+                            scrollbar-width: none;
+                            /* Largura da barra de rolagem no Firefox */
+                            scrollbar-color: #888 #f1f1f1;
+                            /* Cores do thumb e track no Firefox */
+
+                        }
+
+                        .scrollable-paragraph:hover {
+                            scrollbar-width: thin;
+                        }
+                    </style>
                     <div class="about-content">
                         <h2>minha prática</h2>
-                        <p class="m-1">A abordagem Funcional Integrativa vai além do tratamento convencional,
-                            atuando na origem das doenças para promover não apenas a melhora das
-                            patologias, mas também saúde, equilíbrio metabólico e hormonal e qualidade
-                            de vida.</p>
-                        <p class="m-1">Por meio de um plano de tratamento personalizado, combinamos diversas
-                            estratégias para otimizar sua saúde de forma integral. Isso pode incluir ajustes
-                            no estilo de vida, plano alimentar adequado, suplementação individualizada,
-                            reposição hormonal segura, controle de doenças crônicas, manejo da
-                            inflamação e do estresse oxidativo, melhora da qualidade do sono, redução do
-                            estresse, emagrecimento e hipertrofia, entre muitas outras abordagens que não
-                            apenas tratam doenças, mas também promovem uma melhora significativa na
-                            qualidade de vida.​​</p>
-                        <p class="m-1">Juntos, estruturamos um plano estratégico sob medida, totalmente alinhado
-                            aos seus objetivos e necessidades, para tratar doenças existentes e prevenir
-                            novas condições, garantindo um tratamento individualizado, assertivo e
-                            transformador. Meu compromisso é ir além do alívio dos sintomas, promovendo
-                            mudanças reais e duradouras no seu bem-estar e qualidade de vida.</p>
-                        <p>A saúde da gestante também é um dos pilares da minha atuação. Durante a
-                            gravidez, a abordagem Funcional Integrativa permite um cuidado mais
-                            personalizado e completo, garantindo o equilíbrio metabólico e hormonal para
-                            uma gestação saudável e segura. Estratégias como suplementação
-                            personalizada, ajustes nutricionais, controle da inflamação, do estresse
-                            oxidativo, da resistência insulínica e o manejo de doenças crônicas, além de
-                            mudanças no estilo de vida, ajudam a prevenir complicações gestacionais,
-                            melhorar a saúde da mãe e do bebê e proporcionar um período gestacional
-                            mais saudável e tranquilo.</p>
-                        <a class="banner-btn" href="about-us.html" data-text="saiba mais"><span>saiba mais</span></a>
+                        <div class="about-content scrollable-paragraph">
+                            <p class="m-1">A abordagem Funcional Integrativa vai além do
+                                tratamento convencional,
+                                atuando na origem das doenças para promover não apenas a melhora das
+                                patologias, mas também saúde, equilíbrio metabólico e hormonal e qualidade
+                                de vida.</p>
+                            <p class="m-1">Por meio de um plano de tratamento personalizado, combinamos diversas
+                                estratégias para otimizar sua saúde de forma integral. Isso pode incluir ajustes
+                                no estilo de vida, plano alimentar adequado, suplementação individualizada,
+                                reposição hormonal segura, controle de doenças crônicas, manejo da
+                                inflamação e do estresse oxidativo, melhora da qualidade do sono, redução do
+                                estresse, emagrecimento e hipertrofia, entre muitas outras abordagens que não
+                                apenas tratam doenças, mas também promovem uma melhora significativa na
+                                qualidade de vida.​​</p>
+                            <p class="m-1">Juntos, estruturamos um plano estratégico sob medida, totalmente alinhado
+                                aos seus objetivos e necessidades, para tratar doenças existentes e prevenir
+                                novas condições, garantindo um tratamento individualizado, assertivo e
+                                transformador. Meu compromisso é ir além do alívio dos sintomas, promovendo
+                                mudanças reais e duradouras no seu bem-estar e qualidade de vida.</p>
+                            <p class="m-1">A saúde da gestante também é um dos pilares da minha atuação. Durante a
+                                gravidez, a abordagem Funcional Integrativa permite um cuidado mais
+                                personalizado e completo, garantindo o equilíbrio metabólico e hormonal para
+                                uma gestação saudável e segura. Estratégias como suplementação
+                                personalizada, ajustes nutricionais, controle da inflamação, do estresse
+                                oxidativo, da resistência insulínica e o manejo de doenças crônicas, além de
+                                mudanças no estilo de vida, ajudam a prevenir complicações gestacionais,
+                                melhorar a saúde da mãe e do bebê e proporcionar um período gestacional
+                                mais saudável e tranquilo.</p>
+                        </div>
+                        <a class="banner-btn" style="margin-top: 25px;" href="about-us.html"
+                            data-text="saiba mais"><span>saiba mais</span></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -179,7 +244,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-class">
                         <div class="single-img">
-                            <a href="class.html"><img src="img/class/1.webp" alt="class"></a>
+                            <a href="class.html"><img src="img/class/emagrecimento-feminino-1.webp" alt="class"></a>
                             <div class="gallery-icon">
                                 <a href="/class.html">
                                     <h6></h6>
@@ -188,7 +253,7 @@
                             </div>
                         </div>
                         <div class="single-content">
-                            <h3><a href="class.html">ginecologia e obstetrícia</a></h3>
+                            <h3><a href="class.html">emagrecimento feminino</a></h3>
                             <!-- <ul>
                                 <li><i class="zmdi zmdi-face"></i></li>
                                 <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
@@ -199,122 +264,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-class">
                         <div class="single-img">
-                            <a href="class.html"><img src="img/class/2.webp" alt="class"></a>
-                            <div class="gallery-icon">
-                                <a href="/class.html">
-                                    <i class="zmdi zmdi-plus-circle-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="single-content">
-                            <h3><a href="class.html">medicina funcional integrativa</a></h3>
-                            <!-- <ul>
-                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
-                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
-                            </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-class">
-                        <div class="single-img">
-                            <a href="class.html"><img src="img/class/3.webp" alt="class"></a>
-                            <div class="gallery-icon">
-                                <a href="/class.html">
-                                    <i class="zmdi zmdi-plus-circle-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="single-content">
-                            <h3><a href="class.html">medicina de precisão</a></h3>
-                            <!-- <ul>
-                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
-                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
-                            </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-class">
-                        <div class="single-img">
-                            <a href="class.html"><img src="img/class/1.webp" alt="class"></a>
-                            <div class="gallery-icon">
-                                <a href="/class.html">
-                                    <i class="zmdi zmdi-plus-circle-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="single-content">
-                            <h3><a href="class.html">tratamento da menopausa e da endometriose</a></h3>
-                            <!-- <ul>
-                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
-                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
-                            </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-class">
-                        <div class="single-img">
-                            <a href="class.html"><img src="img/class/2.webp" alt="class"></a>
-                            <div class="gallery-icon">
-                                <a href="/class.html">
-                                    <i class="zmdi zmdi-plus-circle-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="single-content">
-                            <h3><a href="class.html">tratamento SOP e da infertilidade</a></h3>
-                            <!-- <ul>
-                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
-                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
-                            </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 ">
-                    <div class="single-class">
-                        <div class="single-img">
-                            <a href="class.html"><img src="img/class/3.webp" alt="class"></a>
-                            <div class="gallery-icon">
-                                <a href="/class.html">
-                                    <i class="zmdi zmdi-plus-circle-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="single-content">
-                            <h3><a href="class.html">tratamento de candidíase e outras vulvovaginites</a></h3>
-                            <!-- <ul>
-                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
-                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
-                            </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-class">
-                        <div class="single-img">
-                            <a href="class.html"><img src="img/class/1.webp" alt="class"></a>
-                            <div class="gallery-icon">
-                                <a href="/class.html">
-                                    <i class="zmdi zmdi-plus-circle-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="single-content">
-                            <h3><a href="class.html">suplementação e programação metabólica fetal no
-                                    pré-natal</a></h3>
-                            <!-- <ul>
-                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
-                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
-                            </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-class">
-                        <div class="single-img">
-                            <a href="class.html"><img src="img/class/2.webp" alt="class"></a>
+                            <a href="class.html"><img src="img/class/suplementacao-personalizada-1.webp"
+                                    alt="class"></a>
                             <div class="gallery-icon">
                                 <a href="/class.html">
                                     <i class="zmdi zmdi-plus-circle-o"></i>
@@ -333,7 +284,45 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-class">
                         <div class="single-img">
-                            <a href="class.html"><img src="img/class/3.webp" alt="class"></a>
+                            <a href="class.html"><img src="img/class/perfomance-fisica-mental.webp" alt="class"></a>
+                            <div class="gallery-icon">
+                                <a href="/class.html">
+                                    <i class="zmdi zmdi-plus-circle-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="single-content">
+                            <h3><a href="class.html">perfomance fisica e mental</a></h3>
+                            <!-- <ul>
+                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
+                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-class">
+                        <div class="single-img">
+                            <a href="class.html"><img src="img/class/menopausa-longevidade.webp" alt="class"></a>
+                            <div class="gallery-icon">
+                                <a href="/class.html">
+                                    <i class="zmdi zmdi-plus-circle-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="single-content">
+                            <h3><a href="class.html">menopausa e longevidade</a></h3>
+                            <!-- <ul>
+                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
+                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-class">
+                        <div class="single-img">
+                            <a href="class.html"><img src="img/class/reposicao-hormonal-2.webp" alt="class"></a>
                             <div class="gallery-icon">
                                 <a href="/class.html">
                                     <i class="zmdi zmdi-plus-circle-o"></i>
@@ -347,13 +336,12 @@
                                 <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
                             </ul> -->
                         </div>
-
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 ">
                     <div class="single-class">
                         <div class="single-img">
-                            <a href="class.html"><img src="img/class/1.webp" alt="class"></a>
+                            <a href="class.html"><img src="img/class/sop.webp" alt="class"></a>
                             <div class="gallery-icon">
                                 <a href="/class.html">
                                     <i class="zmdi zmdi-plus-circle-o"></i>
@@ -361,7 +349,7 @@
                             </div>
                         </div>
                         <div class="single-content">
-                            <h3><a href="class.html">planos de emagrecimento e hipertrofia</a></h3>
+                            <h3><a href="class.html">sindrome de ovários policísticos</a></h3>
                             <!-- <ul>
                                 <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
                                 <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
@@ -372,7 +360,85 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-class">
                         <div class="single-img">
-                            <a href="class.html"><img src="img/class/1.webp" alt="class"></a>
+                            <a href="class.html"><img src="img/class/endometriose.webp" alt="class"></a>
+                            <div class="gallery-icon">
+                                <a href="/class.html">
+                                    <i class="zmdi zmdi-plus-circle-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="single-content">
+                            <h3><a href="class.html">endometriose e dor pélvica crônica</a></h3>
+                            <!-- <ul>
+                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
+                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-class">
+                        <div class="single-img">
+                            <a href="class.html"><img src="img/class/disturbios-menstruais.webp" alt="class"></a>
+                            <div class="gallery-icon">
+                                <a href="/class.html">
+                                    <i class="zmdi zmdi-plus-circle-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="single-content">
+                            <h3><a href="class.html">distúrbios menstruais e TPM</a></h3>
+                            <!-- <ul>
+                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
+                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-class">
+                        <div class="single-img">
+                            <a href="class.html"><img src="img/class/programacao-metabolica-fetal-2.webp"
+                                    alt="class"></a>
+                            <div class="gallery-icon">
+                                <a href="/class.html">
+                                    <i class="zmdi zmdi-plus-circle-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="single-content">
+                            <h3><a href="class.html">programação metabólica fetal</a></h3>
+                            <!-- <ul>
+                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
+                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
+                            </ul> -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-class">
+                        <div class="single-img">
+                            <a href="class.html"><img src="img/class/parto-humanizado-1.webp" alt="class"></a>
+                            <div class="gallery-icon">
+                                <a href="/class.html">
+                                    <i class="zmdi zmdi-plus-circle-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="single-content">
+                            <h3><a href="class.html">parto humanizado</a></h3>
+                            <!-- <ul>
+                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
+                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-class">
+                        <div class="single-img">
+                            <a href="class.html"><img src="img/class/tratamento-libido-2.webp" alt="class"></a>
                             <div class="gallery-icon">
                                 <a href="/class.html">
                                     <i class="zmdi zmdi-plus-circle-o"></i>
@@ -391,7 +457,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-class">
                         <div class="single-img">
-                            <a href="class.html"><img src="img/class/2.webp" alt="class"></a>
+                            <a href="class.html"><img src="img/class/programacao-metabolica-fetal-1.webp"
+                                    alt="class"></a>
                             <div class="gallery-icon">
                                 <a href="/class.html">
                                     <i class="zmdi zmdi-plus-circle-o"></i>
@@ -399,7 +466,7 @@
                             </div>
                         </div>
                         <div class="single-content">
-                            <h3><a href="class.html">tratamento da inflamação crônica e do stress oxidativo</a></h3>
+                            <h3><a href="class.html">obstétricia individualizada</a></h3>
                             <!-- <ul>
                                 <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
                                 <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
@@ -410,7 +477,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-class">
                         <div class="single-img">
-                            <a href="class.html"><img src="img/class/3.webp" alt="class"></a>
+                            <a href="class.html"><img src="img/class/cannabis-medicinal.webp" alt="class"></a>
                             <div class="gallery-icon">
                                 <a href="/class.html">
                                     <i class="zmdi zmdi-plus-circle-o"></i>
@@ -419,44 +486,6 @@
                         </div>
                         <div class="single-content">
                             <h3><a href="class.html">cannabis medicinal</a></h3>
-                            <!-- <ul>
-                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
-                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
-                            </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-class">
-                        <div class="single-img">
-                            <a href="class.html"><img src="img/class/1.webp" alt="class"></a>
-                            <div class="gallery-icon">
-                                <a href="/class.html">
-                                    <i class="zmdi zmdi-plus-circle-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="single-content">
-                            <h3><a href="class.html">tratamento da síndrome pós-COVID-19</a></h3>
-                            <!-- <ul>
-                                <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
-                                <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
-                            </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-class">
-                        <div class="single-img">
-                            <a href="class.html"><img src="img/class/2.webp" alt="class"></a>
-                            <div class="gallery-icon">
-                                <a href="/class.html">
-                                    <i class="zmdi zmdi-plus-circle-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="single-content">
-                            <h3><a href="class.html">promoção de saúde intestinal</a></h3>
                             <!-- <ul>
                                 <li><i class="zmdi zmdi-face"></i>Sathi Bhuiyan</li>
                                 <li><i class="zmdi zmdi-alarm"></i>10.00Am-05:00Pm</li>
@@ -827,13 +856,13 @@
                 <div class="col-lg-8 offset-xl-2 offset-lg-2">
                     <div class="section-title text-center">
                         <h2>tabela de preços</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum issss
-                            has been the industry's standard dummy text ever since the 1500s, when an unknown lorem </p>
+                        <p>Conheça nossos pacotes de tratamento completos em ginecologia e obstetrícia, garantindo um
+                            cuidado personalizado e de alta qualidade para a saúde feminina.</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="single-table text-center">
                         <div class="table-head">
                             <h2>pacote básico</h2>
@@ -854,7 +883,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="single-table text-center">
                         <div class="table-head">
                             <h2>pacote intermediário</h2>
@@ -875,7 +904,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                     <div class="single-table text-center">
                         <div class="table-head">
                             <h2>pacote premium</h2>
@@ -896,7 +925,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                     <div class="single-table text-center">
                         <div class="table-head">
                             <h2>pacote black</h2>
