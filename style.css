@@ -318,7 +318,7 @@ td.pink {
     width: 100%;
     height: 100%;
     content: "";
-    background: rgba(95, 199, 174, 0.79) none repeat scroll 0 0 padding-box content-box;
+    background: #D89D55 none repeat scroll 0 0 padding-box content-box;
     opacity: 0;
     transform: scaleY(0);
     padding: 15px;
@@ -615,11 +615,11 @@ td.pink {
 }
 
 .single-table:hover .table-body a {
-    box-shadow: 0 0 4px 4px #CB8024;
+    box-shadow: 0 0 4px 1px #F2D7B7;
 }
 
 .table-head h2 {
-    font-size: 20px;
+    font-size: 18px;
     color: #757575;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -632,7 +632,7 @@ td.pink {
 
 .table-head h1 {
     background: #FFf;
-    font-size: 48px;
+    font-size: 42px;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     padding: 25px 0;
@@ -718,7 +718,7 @@ td.pink {
     width: 115px;
     border-radius: 50%;
     background: #D89D55;
-    box-shadow: 0 0 5px 0px #F2D7B7;
+    box-shadow: 0 0 5px 0px black;
     left: -45px;
     top: -45px;
     content: "";
