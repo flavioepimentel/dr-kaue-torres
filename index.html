@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 </head>
 
@@ -246,7 +248,8 @@
                         <div class="single-img">
                             <a href="service.html"><img src="img/class/emagrecimento-feminino-1.webp" alt="class"></a>
                             <div class="gallery-icon">
-                                <a href="/service.html">
+                                <a href="#" class="open-modal" data-image="img/class/emagrecimento-feminino-1.webp"
+                                    data-text="Emagrecimento Feminino - Uma abordagem completa para saúde e bem-estar.">
                                     <h6></h6>
                                     <i class="zmdi zmdi-plus-circle-o"></i>
                                 </a>
@@ -267,7 +270,8 @@
                             <a href="service.html"><img src="img/class/suplementacao-personalizada-1.webp"
                                     alt="class"></a>
                             <div class="gallery-icon">
-                                <a href="/service.html">
+                                <a href="#" class="open-modal" data-image="img/class/suplementacao-personalizada-1.webp"
+                                    data-text="Suplementação Personalizada - Uma abordagem completa para saúde e bem-estar.">
                                     <i class="zmdi zmdi-plus-circle-o"></i>
                                 </a>
                             </div>
@@ -286,7 +290,8 @@
                         <div class="single-img">
                             <a href="service.html"><img src="img/class/menopausa-longevidade.webp" alt="class"></a>
                             <div class="gallery-icon">
-                                <a href="/service.html">
+                                <a href="#" class="open-modal" data-image="img/class/menopausa-longevidade.webp"
+                                    data-text="Menopausa e Longevidade - Uma abordagem completa para saúde e bem-estar.">
                                     <i class="zmdi zmdi-plus-circle-o"></i>
                                 </a>
                             </div>
@@ -305,7 +310,8 @@
                         <div class="single-img">
                             <a href="service.html"><img src="img/class/reposicao-hormonal-2.webp" alt="class"></a>
                             <div class="gallery-icon">
-                                <a href="/service.html">
+                                <a href="#" class="open-modal" data-image="img/class/reposicao-hormonal-2.webp"
+                                    data-text="Reposição Horomonal - Uma abordagem completa para saúde e bem-estar.">
                                     <i class="zmdi zmdi-plus-circle-o"></i>
                                 </a>
                             </div>
@@ -324,7 +330,8 @@
                         <div class="single-img">
                             <a href="service.html"><img src="img/class/sop.webp" alt="class"></a>
                             <div class="gallery-icon">
-                                <a href="/service.html">
+                                <a href="#" class="open-modal" data-image="img/class/sop.webp"
+                                    data-text="Sindrome de Ovários Policísticos - Uma abordagem completa para saúde e bem-estar.">
                                     <i class="zmdi zmdi-plus-circle-o"></i>
                                 </a>
                             </div>
@@ -348,6 +355,12 @@
             </div>
     </section>
     <!-- Class Area End -->
+    <!-- Imagens Consultorio Start -->
+    <section class="pt-95 pb-100">
+        <img src="img/office-wrapper.webp" alt="">
+
+    </section>
+    <!-- Imagens Consultorio End -->
     <!-- Schedule Area Strat -->
     <!-- <section class="schedule-area pt-85 pb-90 text-center">
         <div class="container">
@@ -796,7 +809,7 @@
     </div>
     <!-- Pricing Area End -->
     <!-- Client Area Strat -->
-    <section class="client-area pt-95 pb-50">
+    <section class="client-area pt-95 pb-25">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-xl-2 offset-lg-2">
@@ -810,17 +823,19 @@
             <div class="row">
                 <div class="col-lg-10 offset-xl-1 offset-lg-1">
                     <div class="row">
-                        <div class="testimonial-owl">
-                            <div class="col-12">
+                        <div class="testimonial-slider">
+                            <!-- <div class="testimonial-owl"> -->
+                            <div class="col-12 card-block-testimonial">
                                 <div class="single-testimonial">
                                     <i class="zmdi zmdi-quote"></i>
-                                    <p>"Excelente profissional, atencioso e com uma abordagem integrativa voltada para a
+                                    <p>"Excelente profissional, atencioso e com uma abordagem integrativa voltada
+                                        para a
                                         promoção de saúde, fui muito bem
                                         atendida durante minha gestação."</p>
                                     <h6>Paula Regina Silva Freire</h6>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 card-block-testimonial">
                                 <div class="single-testimonial">
                                     <i class="zmdi zmdi-quote"></i>
                                     <p>Uma autoridade no âmbito da Ginecologia e Obstetrícia.
@@ -828,48 +843,75 @@
                                     <h6>Márcia de Paiva</h6>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 card-block-testimonial">
                                 <div class="single-testimonial">
                                     <i class="zmdi zmdi-quote"></i>
                                     <p>Dr. Kauê foi muito profissional, desde o primeiro contato, até a forma como
                                         explicou os resultados dos exames.
-                                        Certamente sua abordagem foi muito útil durante o acompanhamento e tudo ficou
+                                        Certamente sua abordagem foi muito útil durante o acompanhamento e tudo
+                                        ficou
                                         extremamente claro. Recomendo!</p>
                                     <h6>Frederico Purini Nardi</h6>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 card-block-testimonial">
                                 <div class="single-testimonial">
                                     <i class="zmdi zmdi-quote"></i>
-                                    <p>Recomendo o Doutor Kauê, excelente profissional, muito receptivo e educado.</p>
+                                    <p>Recomendo o Doutor Kauê, excelente profissional, muito receptivo e educado.
+                                    </p>
                                     <h6>Renan Segantini da Silva Mello</h6>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 card-block-testimonial">
                                 <div class="single-testimonial">
                                     <i class="zmdi zmdi-quote"></i>
-                                    <p>Excelente atendimento, conhecimento de nível especialista. Recomendo o Dr. Kauê a
+                                    <p>Excelente atendimento, conhecimento de nível especialista. Recomendo o Dr.
+                                        Kauê a
                                         todos. </p>
                                     <h6>Carlos Eduardo Peruzi</h6>
                                 </div>
-                                <div class="col-12">
-                                    <div class="single-testimonial">
-                                        <i class="zmdi zmdi-quote"></i>
-                                        <p>DR. Kaue, quero registrar minha gratidão ao trabalho realizado. Como
-                                            advogado, posso dizer que sua atuação junto ao
-                                            processo será de bastante valia para o êxito da demanda. Sua abordagem
-                                            técnica e científica elevou o patamar de nossa
-                                            atuação processual. </p>
-                                        <h6>Dr. Caio César</h6>
-                                    </div>
+                            </div>
+
+                            <div class="col-12 card-block-testimonial">
+                                <div class="single-testimonial">
+                                    <i class="zmdi zmdi-quote"></i>
+                                    <p>Dr. Kaue, quero registrar minha gratidão ao trabalho realizado. Como
+                                        advogado, posso dizer que sua atuação junto ao
+                                        processo será de bastante valia para o êxito da demanda. Sua abordagem
+                                        técnica e científica elevou o patamar de nossa
+                                        atuação processual. </p>
+                                    <h6>Dr. Caio César</h6>
                                 </div>
                             </div>
                         </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('.testimonial-slider').slick({
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    dots: false,
+                    arrows: false,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    adaptiveHeight: false
+                });
+
+            });;
+        </script>
     </section>
     <!-- Client Area End -->
+    <!-- Office Grid Pictures Start -->
+    <section class="pt-50 pb-100">
+        <img src="img/office-grid.webp" alt="">
+    </section>
+    <!-- Office Grid Pictures End -->
     <!-- Start of Map Area -->
     <div class="map-area">
         <!-- google-map-area start -->
@@ -1010,6 +1052,8 @@
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+
 </body>
 
 </html>
