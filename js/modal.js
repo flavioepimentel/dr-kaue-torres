@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
             // Criando o conteúdo do modal
             modal.innerHTML = `
                 <div class="modal-content">
-                    <span class="close-modal">&times;</span>
+                <span class="close-modal">&times;</span>
+                <div id="divText">
                     <img id="modalImage" src="" alt="Imagem do Modal">
-                    <p id="modalText">Aqui vai o texto do modal.</p>
+                        <p id="modalText">Aqui vai o texto do modal.</p>
+                    </div>
                 </div>
             `;
 
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const textContent = this.getAttribute("data-text");
 
                 modalImage.src = imageSrc;
-                modalText.innerText = textContent;
+                modalText.innerHTML = textContent;
 
                 modal.style.display = "flex"; // Exibe o modal
             });
