@@ -1,60 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
-        const openModalButtons = document.querySelectorAll(".open-modal");
+    const openModalButtons = document.querySelectorAll(".open-modal");
 
-        function createModal() {
-            // Criando o container principal do modal
-            const modal = document.createElement("div");
-            modal.id = "customModal";
-            modal.classList.add("modal-overlay");
-            modal.style.display = "none"; // Garante que ele inicie oculto
+    function createModal() {
+        const modal = document.createElement("div");
+        modal.id = "customModal";
+        modal.classList.add("modal-overlay");
+        modal.style.display = "none";
 
-            // Criando o conteúdo do modal
-            modal.innerHTML = `
-                <div class="modal-content">
+        modal.innerHTML = `
+            <div class="modal-content">
                 <span class="close-modal">&times;</span>
-                <div id="divText">
+                <div id="modalContentWrapper">
                     <img id="modalImage" src="" alt="Imagem do Modal">
-                        <p id="modalText">Aqui vai o texto do modal.</p>
-                    </div>
+                    <div id="modalText"></div>
                 </div>
-            `;
+            </div>
+        `;
 
-            // Adiciona o modal ao final do <body>
-            document.body.appendChild(modal);
+        document.body.appendChild(modal);
+        return modal;
+    }
 
-            return modal;
-        }
+    let modal = createModal();
+    let modalImage = document.getElementById("modalImage");
+    let modalText = document.getElementById("modalText");
+    let closeModal = document.querySelector(".close-modal");
 
-        // Criando o modal e armazenando a referência
-        let modal = createModal();
-        let modalImage = document.getElementById("modalImage");
-        let modalText = document.getElementById("modalText");
-        let closeModal = document.querySelector(".close-modal");
+    openModalButtons.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
 
-        // Adiciona evento de clique para abrir o modal
-        openModalButtons.forEach(button => {
-            button.addEventListener("click", function (event) {
-                event.preventDefault();
+            const imageSrc = this.getAttribute("data-image");
+            const textContent = this.getAttribute("data-text");
 
-                const imageSrc = this.getAttribute("data-image");
-                const textContent = this.getAttribute("data-text");
+            modalImage.src = imageSrc;
+            modalText.innerHTML = textContent;
 
-                modalImage.src = imageSrc;
-                modalText.innerHTML = textContent;
-
-                modal.style.display = "flex"; // Exibe o modal
-            });
-        });
-
-        // Fechar o modal ao clicar no botão de fechar
-        closeModal.addEventListener("click", function () {
-            modal.style.display = "none";
-        });
-
-        // Fechar o modal ao clicar fora dele
-        modal.addEventListener("click", function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
+            // Reset scroll position
+            modal.querySelector('.modal-content').scrollTop = 0;
+            
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Impede rolagem da página principal
         });
     });
+
+    function closeModalFunction() {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Restaura rolagem da página principal
+    }
+
+    closeModal.addEventListener("click", closeModalFunction);
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            closeModalFunction();
+        }
+    });
+
+    // Fechar modal com ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === "flex") {
+            closeModalFunction();
+        }
+    });
+});
