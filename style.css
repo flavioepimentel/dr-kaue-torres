@@ -13,7 +13,8 @@
     ===================
 	
     1. About Area
-    2. Class Area
+    2. Minha Prática
+    2. Serviços Area
     3. Schedule Area
     4. Trainer Area
     5. Gallery Area
@@ -91,8 +92,136 @@
     font-size: 60px;
 }
 
+/*-----------------------------------------*/
+/*  2. Minha Prática Area
 /*----------------------------------------*/
-/*  2. Class Area
+
+/* Garante alinhamento perfeito */
+.text-center.mt-4 {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* Opcional: ajuste de espaçamento entre features e botão */
+.pratica-features {
+    margin-bottom: 1rem;
+}
+
+/* Mantém estilo existente do botão */
+.banner-btn {
+    display: inline-block;
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+}
+
+.minha-pratica-area {
+    background: linear-gradient(135deg, rgba(216, 157, 85, 0.05) 0%, rgba(255, 255, 255, 0.9) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.minha-pratica-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/patterns/medical-pattern.webp') repeat;
+    opacity: 0.03;
+    z-index: 0;
+}
+
+.minha-pratica-content {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.minha-pratica-img {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img-border-radius {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: #D89D55;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.experience-badge span {
+    font-size: 28px;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+
+.experience-badge p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+.pratica-features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.feature-item {
+    text-align: center;
+    flex: 1;
+    padding: 0 10px;
+}
+
+.feature-item i {
+    font-size: 30px;
+    color: #D89D55;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.feature-item h5 {
+    font-size: 16px;
+    color: #676767;
+}
+
+/* Mantendo o scrollable-paragraph existente */
+.scrollable-paragraph {
+    height: 270px;
+    overflow-y: scroll;
+    direction: rtl;
+    text-align: left;
+    margin-left: -15px;
+    padding-left: 15px;
+}
+
+.scrollable-paragraph::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scrollable-paragraph::-webkit-scrollbar-thumb {
+    background: #D89D55;
+    border-radius: 5px;
+}
+
+/*----------------------------------------*/
+/*  3. Serviços Area
 /*----------------------------------------*/
 .single-img,
 .portfolio-img {
