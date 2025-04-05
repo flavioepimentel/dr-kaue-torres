@@ -76,30 +76,34 @@
     </header>
     <!-- Header Area End -->
     <!-- Background Area Start -->
+    <!-- Banner for desktop -->
+    <!-- Banner Desktop (≥1024px) -->
     <div class="slider-area">
         <div class="slider-wrapper">
-            <div class="single-slide" style="background-image: url('img/slider/slider1.webp');">
+            <div class="single-slide">
+                <picture class="picture-desktop">
+                    <!-- Imagem otimizada para desktop -->
+                    <source media="(min-width: 1024px)" srcset="img/slider/slider1-desktop.webp" type="image/webp">
+                    <!-- Fallback para navegadores que não suportam picture -->
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        alt="Dr. Kauê Torres" class="lazyload" data-src="img/slider/slider1-desktop.webp">
+                </picture>
                 <div class="slider-content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <div class="text-content-wrapper">
-                                    <div class="text-content text-start">
-                                        <h5>Bem-vinda ao consultório do Dr. Kauê Torres, onde sua saúde e bem-estar são
-                                            prioridade.</h5>
-                                        <h1>Cuidado <span>Personalizado</span> Para Cada Fase da Vida da Mulher
-                                        </h1>
-                                        <p>
-                                            Aqui, unimos a Ginecologia e Obstetrícia, Endocrinologia e a Medicina
-                                            Funcional Integrativa para proporcionar um cuidado
-                                            completo, eficaz e duradouro. Agende sua
-                                            consulta e transforme sua saúde com o auxílio
-                                            de um profissional dedicado e competente.
-                                        </p>
-
-
-                                        <a class="banner-btn" href="service.html" data-text="saiba mais"><span>saiba
-                                                mais</span></a>
+                    <div class="slider-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="text-content-wrapper">
+                                        <div class="text-content text-start">
+                                            <h5>Bem-vinda ao consultório do Dr. Kauê Torres, onde sua saúde e bem-estar
+                                                são prioridade.</h5>
+                                            <h1>Cuidado <span>Personalizado</span> Para Cada Fase da Vida da Mulher</h1>
+                                            <p>Aqui, unimos a Ginecologia e Obstetrícia, Endocrinologia e a Medicina
+                                                Funcional Integrativa
+                                                para proporcionar um cuidado completo, eficaz e duradouro.</p>
+                                            <a class="banner-btn" href="service.html" data-text="saiba mais"><span>saiba
+                                                    mais</span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -109,6 +113,38 @@
             </div>
         </div>
     </div>
+
+    <!-- Banner Mobile (<1024px) -->
+    <div class="hero-banner">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="text-content text-start">
+                    <h5>Bem-vinda ao consultório do Dr. Kauê Torres, onde sua saúde e bem-estar são prioridade.</h5>
+                    <h1>Cuidado <span>Personalizado</span> Para Cada Fase da Mulher</h1>
+                    <p>Aqui, unimos a Ginecologia e Obstetrícia, Endocrinologia e a Medicina Funcional Integrativa para
+                        proporcionar um
+                        cuidado completo, eficaz e duradouro.</p>
+                    <a class="banner-btn" href="service.html" data-text="saiba mais"><span>saiba mais</span></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <picture>
+                    <!-- Imagem otimizada para mobile -->
+                    <source media="(max-width: 1023px)" srcset="img/slider/slider1-mobile.webp" type="image/webp">
+                    <!-- Fallback -->
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        alt="Dr. Kauê Torres" class="hero-img lazyload" data-src="img/slider/slider1-mobile.webp"
+                        width="815" height="863">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pré-carregamento inteligente -->
+    <link rel="preload" as="image" href="img/slider/slider1-desktop.webp" media="(min-width: 1024px)">
+    <link rel="preload" as="image" href="img/slider/slider1-mobile.webp" media="(max-width: 1023px)">
+
+
     <!-- Background Area End -->
     <!-- About Start -->
     <section class="about-area pt-95 pb-100">
@@ -118,16 +154,19 @@
                     <div class="about-content">
                         <h2>Sobre mim</h2>
                         <div class="about-content">
-                            <p class="m-1">Nascido em Santos e criado em São José do Rio Preto, sou médico ginecologista
+                            <p class="m-1">Nascido em Santos e criado em São José do Rio Preto, sou médico
+                                ginecologista
                                 e obstetra com especialização em Medicina Funcional Integrativa e Pós-Graduando em
                                 Endocrinologia pela
                                 Academia Brasileira de Medicina Funcional Integrativa. Minha jornada sempre
                                 foi guiada pelo desejo de cuidar de mulheres com escuta atenta, abordagem integral e
                                 respeito à individualidade de cada paciente.
                             </p>
-                            <p class="m-1">Acredito em uma medicina que vai além do tratamento de sintomas, priorizando
+                            <p class="m-1">Acredito em uma medicina que vai além do tratamento de sintomas,
+                                priorizando
                                 prevenção, equilíbrio hormonal e bem-estar duradouro. Cada consulta é um espaço de
-                                acolhimento, onde elaboramos juntos um plano personalizado para sua saúde plena. Conheça
+                                acolhimento, onde elaboramos juntos um plano personalizado para sua saúde plena.
+                                Conheça
                                 minha trajetória e descubra como podemos trabalhar pela sua qualidade de vida.​​</p>
                         </div>
                         <a class="banner-btn" style="margin-top: 25px;" href="about-us.html"
@@ -169,13 +208,17 @@
                         <div>
                             <p>Acredito em um cuidado que vai além dos sintomas – uma abordagem integrativa que une
                                 ciência e acolhimento para tratar a raiz dos desequilíbrios. Combinando ginecologia,
-                                obstetrícia e medicina funcional, ofereço um tratamento personalizado que considera seu
+                                obstetrícia e medicina funcional, ofereço um tratamento personalizado que considera
+                                seu
                                 corpo, hormônios, emoções e estilo de vida como partes de um todo.
                             </p>
                             <p>Cada plano é único, criado para promover saúde duradoura através de estratégias que
-                                incluem desde nutrição e suplementação inteligente até o equilíbrio hormonal e manejo do
-                                estresse. Aqui, você encontra não apenas diagnósticos precisos, mas um parceiro dedicado
-                                a guiá-la rumo ao seu melhor potencial de saúde. Vamos juntos construir esse caminho?
+                                incluem desde nutrição e suplementação inteligente até o equilíbrio hormonal e
+                                manejo do
+                                estresse. Aqui, você encontra não apenas diagnósticos precisos, mas um parceiro
+                                dedicado
+                                a guiá-la rumo ao seu melhor potencial de saúde. Vamos juntos construir esse
+                                caminho?
                             </p>
                         </div>
                         <div class="pratica-features">
@@ -977,7 +1020,8 @@
                 <div class="col-lg-8 offset-xl-2 offset-lg-2">
                     <div class="section-title text-center">
                         <h2>Depoimentos</h2>
-                        <p>Com uma abordagem humanizada e dedicada, o Dr. Kauê tem ajudado inúmeras mulheres a cuidarem
+                        <p>Com uma abordagem humanizada e dedicada, o Dr. Kauê tem ajudado inúmeras mulheres a
+                            cuidarem
                             de sua saúde em todas as fases da vida. Veja o que elas têm a dizer! </p>
                     </div>
                 </div>
@@ -1126,6 +1170,12 @@
         </div>
     </section>
     <!-- Newsletter Area End -->
+    <div class="whatsapp-float">
+        <a href="https://api.whatsapp.com/send?phone=5516992341205" target="_blank" class="whatsapp-btn"
+            aria-label="Fale conosco pelo WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
     <!-- Footer Area Start -->
     <footer class="footer-area bg-gray">
         <div class="footer-widget-area bg-3 pt-98 pb-90 fix">
@@ -1139,7 +1189,8 @@
                             <ul>
                                 <li><i class="zmdi zmdi-email"></i> contato.kauetorres@gmail.com</li>
                                 <li><i class="zmdi zmdi-phone"></i> (16) 99234-1205</li>
-                                <li><i class="zmdi zmdi-home"></i> Av. Armando Corrêa de Siqueira, 1104 - Vila Harmonia,
+                                <li><i class="zmdi zmdi-home"></i> Av. Armando Corrêa de Siqueira, 1104 - Vila
+                                    Harmonia,
                                     Araraquara - SP, 14802-580</li>
                             </ul>
                         </div>

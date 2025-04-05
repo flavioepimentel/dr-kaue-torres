@@ -6,58 +6,193 @@ Author: HasTech
 Author URI: https://devitems.com/
 Version: 1.0
 NOTE: This is Slider style file. All Slider related style included in this file.
-
 --------------------------------------*/
+
+/* ==================== */
+/*  ESTILOS GERAIS      */
+/* ==================== */
+:root {
+  --primary-color: #D89D55;
+  --text-color: #666666;
+  --secondary-text: #7f7f7f;
+  --light-bg: #f1f1f1;
+}
+
+/* ==================== */
+/*  BANNER PRINCIPAL    */
+/* ==================== */
+
+/* Controle de Exibição Responsiva */
 .slider-area {
+  display: block;
   position: relative;
   overflow: hidden;
+  height: 100vh;
+  min-height: 650px;
 }
 
-.slider-area img {
-  width: 100%;
+.hero-banner {
+  display: none;
 }
 
-.slider-area,
-.slider-content,
-.single-slide,
-.owl-item,
-.owl-stage,
-.slider-wrapper,
-.owl-stage-outer,
-.slider-content .container,
-.slider-content .row,
-.slider-content .col-lg-7,
-.slider-content .text-content-wrapper,
-.slider-content .text-content,
-.slider-content .display-table,
-.slider-content .display-table-cell {
+@media (max-width: 1023px) {
+  .slider-area {
+    display: none;
+  }
+
+  .hero-banner {
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+/* ==================== */
+/*  ESTILO DESKTOP      */
+/* ==================== */
+.slider-wrapper {
+  position: relative;
   height: 100%;
 }
 
-.slider-content {
-  z-index: 99;
-  position: relative
+.single-slide {
+  position: relative;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
-.text-content-wrapper,
-.slider-area img {
+.slider-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+}
+
+.slider-content .container {
   width: 100%;
 }
 
-.slider-content .text-content-wrapper {
-  display: table;
+.text-content-wrapper {
+  max-width: 600px;
 }
 
-.slider-content .text-content {
-  display: table-cell;
-  vertical-align: middle;
+
+
+/* ==================== */
+/*  ESTILO MOBILE       */
+/* ==================== */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f1f1f1;
 }
 
+.hero-content {
+  order: 2;
+  padding: 10px 8px;
+  background-color: rgba(255, 255, 255, 0.949);
+  border-radius: 8px;
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+  order: 1;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    order: 1;
+    flex: 1;
+    margin-top: 0;
+    margin-right: -50px;
+    padding: 40px;
+  }
+
+  .hero-image {
+    order: 2;
+    flex: 1;
+  }
+
+  .hero-img {
+    max-height: 600px;
+  }
+
+
+}
+
+/* ==================== */
+/*  ELEMENTOS COMUNS    */
+/* ==================== */
+.slider-content h5,
+.hero-content h5 {
+  font-size: 16px;
+  color: var(--secondary-text);
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.slider-content h1,
+.hero-content h1 {
+  color: var(--text-color);
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.slider-content h1 span,
+.hero-content h1 span {
+  color: var(--primary-color);
+}
+
+.slider-content p,
+.hero-content p {
+  color: var(--secondary-text);
+  font-size: 16px;
+  margin-bottom: 32px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}
+
+/* ==================== */
+/*  BOTÕES              */
+/* ==================== */
 .banner-btn {
   background: transparent;
-  color: #666666;
+  color: var(--text-color);
   display: inline-block;
-  border: 1px solid #D89D55;
+  border: 1px solid var(--primary-color);
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -68,8 +203,8 @@ NOTE: This is Slider style file. All Slider related style included in this file.
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  transition: all 0.5s ease;
+  text-decoration: none;
 }
 
 .banner-btn::after {
@@ -79,13 +214,14 @@ NOTE: This is Slider style file. All Slider related style included in this file.
   opacity: 0;
   position: absolute;
   top: 0;
-  transform: translate(-30%, 0px);
-  transition: all 0.3s ease 0s;
+  transform: translate(-30%, 0);
+  transition: all 0.3s ease;
   width: 100%;
 }
 
 .banner-btn span {
-  transition: all 0.3s ease 0s;
+  display: block;
+  transition: all 0.3s ease;
 }
 
 .banner-btn:hover {
@@ -94,146 +230,81 @@ NOTE: This is Slider style file. All Slider related style included in this file.
 
 .banner-btn:hover>span {
   opacity: 0;
-  transform: translate(0px, 40px);
+  transform: translate(0, 40px);
 }
 
 .banner-btn:hover::after {
   opacity: 1;
-  transform: translate(0px, 0px);
+  transform: translate(0, 0);
 }
 
-.slider-content h5 {
-  font-size: 16px;
-  color: #7f7f7f;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 3px;
-  font-weight: 400;
-  margin-bottom: 8px;
-}
-
-.slider-content h1 {
-  color: #666666;
-  font-size: 36px;
-  margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
-.slider-content h1 span {
-  color: #D89D55;
-}
-
-.slider-content p {
-  color: #7f7f7f;
-  font-size: 16px;
-  margin-bottom: 32px;
-  font-family: 'Lato', sans-serif;
-}
-
-.slider-area .owl-item.active .slider-content h5,
-.slider-area .owl-item.active .slider-content h3,
-.slider-area .owl-item.active .slider-content h1,
-.slider-area .owl-item.active .slider-content p,
-.slider-area .owl-item.active .slider-content .banner-btn {
-  -webkit-animation: 1000ms ease-in-out 0s normal both 1 running fadeInUp;
-  animation: 1000ms ease-in-out 0s normal both 1 running fadeInUp;
-}
-
-.slider-area .owl-item.active .slider-content h5 {
-  -webkit-animation-delay: 600ms;
-  animation-delay: 600ms
-}
-
-.slider-area .owl-item.active .slider-content h1 {
-  -webkit-animation-delay: 800ms;
-  animation-delay: 800ms
-}
-
-.slider-area .owl-item.active .slider-content p {
-  -webkit-animation-delay: 1000ms;
-  animation-delay: 1000ms
-}
-
-.slider-area .owl-item.active .slider-content h3 {
-  -webkit-animation-delay: 1400ms;
-  animation-delay: 1400ms
-}
-
-.slider-area .owl-item.active .slider-content .banner-btn {
-  -webkit-animation-delay: 1500ms;
-  animation-delay: 1500ms
-}
-
-.owl-nav div {
-  background: rgba(216, 157, 85, 0.4);
-  color: #D89D55;
-  font-size: 30px;
-  border-radius: 3px;
-  height: 40px;
-  left: -46px;
-  line-height: 40px;
-  margin-top: -20px;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
-  width: 40px;
-  z-index: 999;
-}
-
-.owl-nav .owl-next {
-  left: auto;
-  right: -46px;
-}
-
-.slider-area:hover .owl-nav div {
-  left: 0;
-}
-
-.slider-area:hover .owl-nav .owl-next {
-  left: auto;
-  right: 0;
-}
-
-.owl-nav div:hover {
-  background: rgba(216, 157, 85, 0.2);
-  color: #fff
-}
-
-.single-slide {
-  background-position: top center;
-  background-size: cover
-}
-
-.one-page-arrow {
-  border: 1px solid #D89D55;
-  height: 32px;
-  width: 16px;
-  border-radius: 20px;
-  position: absolute;
-  margin-left: -4px;
-  left: 50%;
-  bottom: 20px;
-}
-
-.one-page-arrow i {
-  color: #666666;
-  font-size: 15px;
-  margin-top: 15px;
-  text-align: center;
-}
-
-.animated.infinite {
-  animation-iteration-count: infinite;
-}
-
-.fadeInDown {
-  animation-name: fadeInDown;
-}
-
-.animated {
-  animation-duration: 1s;
+/* ==================== */
+/*  ANIMAÇÕES           */
+/* ==================== */
+.slider-area .slider-content h5,
+.slider-area .slider-content h1,
+.slider-area .slider-content p,
+.slider-area .slider-content .banner-btn,
+.hero-content h5,
+.hero-content h1,
+.hero-content p,
+.hero-content .banner-btn,
+.hero-img {
+  opacity: 0;
   animation-fill-mode: both;
-  opacity: 1;
+}
+
+.hero-img {
+  animation: fadeInUp 1000ms ease-in-out 400ms forwards;
+}
+
+.slider-area .slider-content h5,
+.hero-content h5 {
+  animation: fadeInUp 1000ms ease-in-out 600ms forwards;
+}
+
+.slider-area .slider-content h1,
+.hero-content h1 {
+  animation: fadeInUp 1000ms ease-in-out 800ms forwards;
+}
+
+.slider-area .slider-content p,
+.hero-content p {
+  animation: fadeInUp 1000ms ease-in-out 1000ms forwards;
+}
+
+.slider-area .slider-content .banner-btn,
+.hero-content .banner-btn {
+  animation: fadeInUp 1000ms ease-in-out 1200ms forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ==================== */
+/*  OTIMIZAÇÕES         */
+/* ==================== */
+/* Garante que a imagem de fundo não sobreponha o conteúdo */
+.single-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Correção para o Lazy Load */
+img.lazyloaded {
+  opacity: 1 !important;
 }

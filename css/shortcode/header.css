@@ -137,6 +137,7 @@ NOTE: This is Header style file. All Header related style included in this file.
     border: 1px solid #D89D55;
     color: #D89D55;
     margin-top: -50px;
+    margin-right: -35px;
     padding: 4px 5px;
     position: absolute;
 }
