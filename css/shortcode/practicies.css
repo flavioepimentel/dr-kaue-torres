@@ -82,11 +82,14 @@
     font-size: 1.1rem;
     display: inline-block;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+
 }
 
 /* Doctor Quote Section */
