@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Saudável | Pré-natal Individualizado e Parto Humanizado</title>
+    <meta name="description"
+        content="Pré-natal completo com nutrição estratégica, suplementação inteligente e preparo para parto humanizado. Viva uma gestação saudável e transformadora.">
+
+    <!-- Pré-conexão para melhor performance -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS -->
+    <style>
+        :root {
+            --primary: #D89D55;
+            --primary-light: #E5BA86;
+            --primary-dark: #95652A;
+            --secondary: #E8B8D0;
+            --secondary-light: #F5E1ED;
+            --accent: #A5D6A7;
+            --text: #676767;
+            --text-light: #757575;
+            --bg: #FFFFFF;
+            --bg-light: #F8F8F8;
+            --dark-bg: #333333;
+            --title-font: 'Playfair Display', serif;
+            --text-font: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--text-font);
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--bg);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--title-font);
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--primary-dark);
+        }
+
+        p,
+        li {
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-logo {
+            flex: 1;
+        }
+
+        .logo {
+            max-height: 80px;
+        }
+
+        .header-contact {
+            margin-left: auto;
+        }
+
+        /* Botão Principal */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(216, 157, 85, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(216, 157, 85, 0.4);
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                url('img/gestacao-hero.jpg') center/cover no-repeat;
+            text-align: center;
+            position: relative;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: var(--primary-dark);
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--text);
+        }
+
+        /* Seções */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        /* Seção de Problemas */
+        .problems-section {
+            background-color: var(--secondary-light);
+        }
+
+        .problem-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .problem-card h3 i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        /* Seção de Solução */
+        .solution-section {
+            background: linear-gradient(rgba(245, 245, 245, 0.9), rgba(245, 245, 245, 0.9)),
+                url('img/gestacao-bg-pattern.png') center/cover;
+        }
+
+        .solution-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+            border-top: 5px solid var(--primary);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Seção de Benefícios */
+        .benefits-section {
+            background-color: var(--bg-light);
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-icon {
+            flex-shrink: 0;
+            margin-right: 20px;
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+
+        /* Seção de Credenciais */
+        .credentials-section {
+            background-color: white;
+        }
+
+        .credentials-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .profile-img {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .profile-img img {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-badge span {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .credentials-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Depoimentos */
+        .testimonials-section {
+            background: linear-gradient(rgba(216, 157, 85, 0.9), rgba(216, 157, 85, 0.9)),
+                url('img/gestacao-bg-pattern-2.png') center/cover;
+            color: white;
+        }
+
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-card p {
+            color: white;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .client-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        /* Contador de Vagas */
+        .vacancies-counter {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 10px 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+        }
+
+        .whatsapp-btn {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+            }
+
+            .hero {
+                padding: 150px 0 80px;
+            }
+
+            .credentials-container {
+                flex-direction: column;
+            }
+
+            .profile-img {
+                margin-bottom: 40px;
+            }
+
+            .experience-badge {
+                bottom: -15px;
+                right: 0;
+            }
+        }
+
+        /* Efeitos de Animação */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="index.html"><img class="logo" src="img/logo-gestacao.png"
+                        alt="Gestação Saudável - Dr. Kauê Torres"></a>
+            </div>
+            <div class="header-contact">
+                <a href="https://api.whatsapp.com/send?phone=5516992341205" class="btn-primary" target="_blank">
+                    <i class="fas fa-calendar-check"></i> Agendar Consulta
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <div class="container">
+            <h1 class="delay-1">Gestação Saudável: <br>Nutrição, Suplementação e Parto Humanizado</h1>
+            <p class="delay-2">Gestar é uma das experiências mais transformadoras na vida da mulher — mas também exige
+                cuidado, conhecimento e suporte adequado.</p>
+            <p class="delay-2">Você sabia que a forma como você se alimenta, seu estilo de vida e o acompanhamento
+                durante a gravidez podem influenciar profundamente a sua saúde e o desenvolvimento do seu bebê?</p>
+            <a href="https://api.whatsapp.com/send?phone=5516992341205" class="btn-primary delay-3" target="_blank">
+                <i class="fas fa-heart"></i> Quero cuidar da minha gestação
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção de Problemas -->
+    <section class="section problems-section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Os Desafios Reais de uma Gestação Mal Acompanhada</h2>
+                <p>Mesmo com boa intenção, muitas gestantes enfrentam riscos silenciosos que poderiam ser evitados com
+                    um cuidado individualizado.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 fade-in delay-1">
+                    <div class="problem-card">
+                        <h3><i class="fas fa-utensils"></i> Alimentação pobre em nutrientes</h3>
+                        <p>Uma dieta inadequada pode causar deficiências nutricionais que afetam o desenvolvimento do
+                            seu bebê e aumentam o risco de complicações.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 fade-in delay-2">
+                    <div class="problem-card">
+                        <h3><i class="fas fa-pills"></i> Suplementação genérica e ineficiente</h3>
+                        <p>Tomar suplementos sem orientação personalizada pode ser ineficaz ou até prejudicial para você
+                            e seu bebê.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 fade-in delay-3">
+                    <div class="problem-card">
+                        <h3><i class="fas fa-bed"></i> Sedentarismo, estresse e sono inadequado</h3>
+                        <p>Estes fatores aumentam o risco de pré-eclâmpsia, diabetes gestacional, parto prematuro e
+                            outras complicações.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 fade-in delay-4">
+                    <div class="problem-card">
+                        <h3><i class="fas fa-heart"></i> Falta de suporte emocional e insegurança no parto</h3>
+                        <p>Muitas mulheres enfrentam traumas físicos e emocionais no parto por falta de preparo e
+                            acompanhamento adequado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Solução -->
+    <section class="section solution-section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>A Solução Está em um Pré-natal Individualizado</h2>
+                <p>Uma gestação segura e equilibrada depende de mais do que exames de rotina. Ela exige um
+                    acompanhamento funcional, integrativo e respeitoso da mulher como um todo.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 fade-in delay-1">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Nutrição e Suplementação Personalizadas</h3>
+                        <p>Planos alimentares e protocolos de suplementação adaptados para cada fase da gestação,
+                            baseados em exames e necessidades reais do seu corpo.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in delay-2">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Equilíbrio Metabólico</h3>
+                        <p>Controle de condições como obesidade, resistência à insulina e hipotireoidismo para reduzir
+                            riscos e garantir uma gestação saudável.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in delay-3">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Parto Humanizado</h3>
+                        <p>Preparo completo para viver o parto como protagonista, com uma experiência positiva,
+                            respeitosa e transformadora.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Benefícios -->
+    <section class="section benefits-section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Como Você e Seu Bebê Serão Beneficiados</h2>
+                <p>Um acompanhamento especializado faz toda a diferença para uma gestação saudável e um parto positivo.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 fade-in delay-1">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <div>
+                            <h3>Desenvolvimento Saudável do Bebê</h3>
+                            <p>Nutrição adequada e suplementação inteligente garantem todos os nutrientes necessários
+                                para o desenvolvimento ideal do seu bebê.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 fade-in delay-2">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h3>Redução de Riscos Gestacionais</h3>
+                            <p>Controle do ganho de peso, prevenção de diabetes gestacional e pré-eclâmpsia para uma
+                                gestação mais segura.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 fade-in delay-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div>
+                            <h3>Bem-estar Físico e Emocional</h3>
+                            <p>Controle do estresse, qualidade do sono e atividades físicas adequadas para cada fase da
+                                gestação.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 fade-in delay-4">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hands"></i>
+                        </div>
+                        <div>
+                            <h3>Preparação para o Parto Humanizado</h3>
+                            <p>Você merece ser a protagonista do seu parto e viver uma experiência única, positiva e
+                                transformadora.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Credenciais -->
+    <section class="section credentials-section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Conheça o Profissional</h2>
+                <p>Dr. Kauê é médico Ginecologista e Obstetra, com atuação focada em Medicina Funcional Integrativa para
+                    gestantes.</p>
+            </div>
+
+            <div class="credentials-container">
+                <div class="profile-img fade-in delay-1">
+                    <img src="img/dr-kaue-atendendo.jpg"
+                        alt="Dr. Kauê Torres atendendo uma gestante com cuidado e atenção">
+                    <div class="experience-badge">
+                        <span>+5 anos</span>
+                        <p>de experiência</p>
+                    </div>
+                </div>
+
+                <div class="credentials-content fade-in delay-2">
+                    <h3>Formação e Abordagem</h3>
+                    <p>Ofereço um pré-natal completo, com ênfase na prevenção de complicações gestacionais, equilíbrio
+                        nutricional e emocional, promoção de saúde durante a gestação e preparo consciente para o parto.
+                    </p>
+
+                    <h3 class="mt-4">Especializações</h3>
+                    <ul>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Ginecologia e Obstetrícia</li>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Medicina Funcional Integrativa
+                        </li>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Nutrição na Gestação</li>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Parto Humanizado</li>
+                    </ul>
+
+                    <div class="mt-4">
+                        <a href="https://api.whatsapp.com/send?phone=5516992341205" class="btn-primary" target="_blank">
+                            <i class="fas fa-calendar-alt"></i> Agendar Consulta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Depoimentos de Gestantes</h2>
+                <p>Veja o que outras mães dizem sobre a experiência do pré-natal individualizado</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 fade-in delay-1">
+                    <div class="testimonial-card">
+                        <p>"O acompanhamento do Dr. Kauê transformou minha gestação. Me senti acolhida, segura e
+                            preparada para o parto. Meu bebê nasceu saudável e meu parto foi uma experiência incrível!"
+                        </p>
+                        <div class="client-info">
+                            <img src="img/cliente1.jpg" alt="Ana Clara, mãe do Pedro" class="client-img">
+                            <div>
+                                <h4>Ana Clara</h4>
+                                <p>Mãe do Pedro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in delay-2">
+                    <div class="testimonial-card">
+                        <p>"Tinha diabetes gestacional e estava muito preocupada. Com o plano alimentar personalizado e
+                            o acompanhamento próximo, consegui controlar sem medicação e meu bebê nasceu perfeito!"</p>
+                        <div class="client-info">
+                            <img src="img/cliente2.jpg" alt="Juliana, mãe da Sofia" class="client-img">
+                            <div>
+                                <h4>Juliana</h4>
+                                <p>Mãe da Sofia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in delay-3">
+                    <div class="testimonial-card">
+                        <p>"Depois de um parto traumático na primeira gestação, encontrei no Dr. Kauê o suporte que
+                            precisava para ter um parto humanizado e transformador. Gratidão por todo cuidado!"</p>
+                        <div class="client-info">
+                            <img src="img/cliente3.jpg" alt="Fernanda, mãe do Lucas e da Maria" class="client-img">
+                            <div>
+                                <h4>Fernanda</h4>
+                                <p>Mãe do Lucas e da Maria</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contador de Vagas -->
+    <section class="section">
+        <div class="container">
+            <div class="vacancies-counter fade-in">
+                <h3>Vagas Limitadas para Atendimento Personalizado</h3>
+                <p>Para garantir a qualidade do acompanhamento, trabalhamos com um número limitado de gestantes por mês.
+                </p>
+                <div class="counter" id="vacancy-counter">5</div>
+                <p>vagas disponíveis este mês</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section fade-in">
+        <div class="container">
+            <h2>Agende Sua Consulta e Viva uma Gestação Saudável do Início ao Fim</h2>
+            <p>Este é o momento mais importante da sua vida. E ele merece cuidado completo — físico, emocional e
+                técnico.</p>
+            <a href="https://api.whatsapp.com/send?phone=5516992341205" class="btn-primary" target="_blank">
+                <i class="fas fa-heart"></i> Quero cuidar da minha gestação
+            </a>
+        </div>
+    </section>
+
+    <!-- WhatsApp Flutuante -->
+    <div class="whatsapp-float">
+        <a href="https://api.whatsapp.com/send?phone=5516992341205" class="whatsapp-btn" target="_blank"
+            aria-label="Fale conosco pelo WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Gestão Saudável</h3>
+                    <p>Pré-natal individualizado com nutrição estratégica, suplementação inteligente e preparo para
+                        parto humanizado.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (16) 99234-1205</li>
+                        <li><i class="fas fa-envelope"></i> contato.kauetorres@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Armando Corrêa de Siqueira, 1104 - Araraquara/SP
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Horário de Atendimento</h3>
+                    <ul>
+                        <li>Segunda a Sexta: 8h às 18h</li>
+                        <li>Sábado: 8h às 12h</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 Gestação Saudável - Dr. Kauê Torres. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Contador de vagas
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animação do contador de vagas
+            const counterElement = document.getElementById('vacancy-counter');
+            const target = 5; // Número real de vagas disponíveis
+            let current = 10; // Começa de um número maior para criar efeito
+            const duration = 2000; // 2 segundos
+            const startTime = Date.now();
+
+            function updateCounter() {
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                current = Math.max(target, Math.floor(10 - (progress * 5)));
+                counterElement.textContent = current;
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+
+            // Observador de interseção para animações
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        if (entry.target.id === 'vacancy-counter') {
+                            updateCounter();
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Observar todos os elementos com a classe .fade-in-init
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Botão do WhatsApp flutuante
+            const whatsappBtn = document.querySelector('.whatsapp-btn');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    whatsappBtn.style.display = 'flex';
+                } else {
+                    whatsappBtn.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

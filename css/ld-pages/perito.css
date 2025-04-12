@@ -136,7 +136,7 @@ header {
 .hero {
     padding: 180px 0 100px;
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-        url('../../img/ld-pg-pericia/bn.png') center/cover no-repeat !important;
+        url('../../img/ld-pg-pericia/bn.webp') center/cover no-repeat !important;
     text-align: center;
     position: relative;
     margin-top: 80px;
@@ -416,13 +416,77 @@ header {
     font-size: 1.5rem;
 }
 
+/*----------------------------------------*/
+/*  10. Testimonial Area
+/*----------------------------------------*/
+.client-area .section-title p {
+    margin-bottom: 5px;
+}
+
+.single-testimonial {
+    background: #D89D55 none repeat scroll 0 0;
+    color: #FFf;
+    margin: 50px 85px;
+    padding: 48px 105px;
+    position: relative;
+    text-align: center;
+}
+
+.single-testimonial i {
+    color: #FFf;
+    position: absolute;
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+    background: #D89D55;
+    box-shadow: 0 0 5px 0px black;
+    left: -45px;
+    top: -45px;
+    content: "";
+    font-size: 70px;
+    line-height: 120px;
+}
+
+.single-testimonial p {
+    margin-bottom: 25px;
+    color: #FFf;
+}
+
+.single-testimonial h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+
+.testimonial-slider .single-testimonial {
+    display: none;
+    /* Oculta todos os depoimentos inicialmente */
+}
+
+.slick-initialized .single-testimonial {
+    display: block;
+    /*Apenasoslideativoseráexibido*/
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    border-radius: 10px;
+
+}
+
+.card-block-testimonial {
+    padding-top: 15px;
+    margin-top: 38px;
+
+}
+
 /* Estatísticas */
 .stats-section {
+    margin-top: 50px;
     position: relative;
     padding: 100px 0;
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../../img/ld-pg-pericia/bn-2.png') center/cover no-repeat !important;
+        url('../../img/ld-pg-pericia/bn-2.webp') center/cover no-repeat !important;
 }
 
 .section-title-stats h2 {
@@ -567,6 +631,7 @@ header {
 
 .banner-btn::after {
     content: attr(data-text);
+    color: var(--primary-dark);
     height: 100%;
     left: 0;
     opacity: 0;
@@ -584,6 +649,7 @@ header {
 
 .banner-btn:hover {
     background: rgba(216, 157, 85, 0.5);
+    color: var(--primary-dark);
 }
 
 .banner-btn:hover>span {
