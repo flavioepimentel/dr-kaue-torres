@@ -1,0 +1,201 @@
+ /* Cores adicionais */
+ :root {
+     --soft-pink: #F8E1E7;
+     --water-green: #88C9BF;
+     --light-purple: #D4B8E0;
+     --happy-yellow: #FFEBB7;
+ }
+
+ /* Hero Section Especial */
+ .hero-pregnancy {
+     background: linear-gradient(135deg, rgba(216, 157, 85, 0.1) 0%, rgba(136, 201, 191, 0.1) 100%),
+         url('img/gestacao/hero-bg.jpg') center/cover no-repeat;
+     position: relative;
+     padding: 180px 0 100px;
+     margin-top: 80px;
+ }
+
+ .hero-pregnancy::before {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 100px;
+     background: url('img/gestacao/wave-divider.svg') center/cover no-repeat;
+     z-index: 2;
+ }
+
+ /* Cards Especiais */
+ .feature-card-pregnancy {
+     border-radius: 16px;
+     overflow: hidden;
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     border: none;
+     background: white;
+ }
+
+ .feature-card-pregnancy:hover {
+     transform: translateY(-10px) scale(1.02);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+ }
+
+ .feature-card-pregnancy .card-icon {
+     font-size: 2.5rem;
+     color: var(--primary);
+     margin-bottom: 15px;
+     display: inline-block;
+     background: linear-gradient(135deg, var(--soft-pink) 0%, var(--water-green) 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+
+ /* Solução */
+ .sticky-parent {
+     position: relative;
+     overflow: hidden;
+     /* Garante que nada vaze da seção */
+ }
+
+ .sticky-section {
+     position: relative;
+ }
+
+ .sticky-image-wrapper {
+     position: sticky;
+     top: 120px;
+     width: 50%;
+     /* Ajuste conforme a altura da sua navbar */
+     padding-bottom: 20px;
+     /* Espaço abaixo da imagem */
+ }
+
+ @media (max-width: 992px) {
+     .sticky-section {
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: column;
+     }
+
+     .sticky-image-wrapper {
+         position: static;
+         margin-bottom: 30px;
+     }
+
+     .order-lg-1,
+     .order-lg-2 {
+         order: 0;
+     }
+ }
+
+ @media (min-width: 768px) {
+     .hero-pregnancy {
+         background: linear-gradient(135deg, rgba(216, 157, 85, 0.1) 0%, rgba(136, 201, 191, 0.1) 100%),
+             url('img/gestacao/hero-bg.jpg') center/cover no-repeat;
+         padding: 160px 0 120px;
+     }
+
+     .hero-pregnancy h1 {
+         font-size: 2.8rem;
+     }
+
+     .hero-content {
+         padding: 0;
+     }
+ }
+
+ @media (min-width: 576px) {
+     .hero-pregnancy {
+         padding: 140px 0 100px;
+     }
+
+     .hero-pregnancy h1 {
+         font-size: 2.5rem;
+     }
+
+     .hero-pregnancy h1 span {
+         font-size: 1.3rem;
+     }
+
+     .hero-text {
+         font-size: 1.1rem;
+     }
+
+     .hero-subtext {
+         font-size: 1rem;
+     }
+ }
+
+ /* Timeline Interativa */
+ .timeline-container {
+     position: relative;
+     padding: 40px 0;
+ }
+
+ .timeline-item {
+     position: relative;
+     padding-left: 60px;
+     margin-bottom: 40px;
+ }
+
+ .timeline-item::before {
+     content: '';
+     position: absolute;
+     left: 20px;
+     top: 0;
+     width: 2px;
+     height: 100%;
+     background: var(--primary-light);
+ }
+
+ .timeline-dot {
+     position: absolute;
+     left: 10px;
+     top: 0;
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     background: var(--primary);
+     border: 4px solid white;
+     box-shadow: 0 0 0 4px var(--primary-light);
+ }
+
+ /* CTA Especial */
+ .cta-pregnancy {
+     background: linear-gradient(135deg, var(--light-purple) 40%, var(--water-green) 80%);
+     border-radius: 16px;
+     overflow: hidden;
+     position: relative;
+     z-index: 1;
+ }
+
+ .cta-pregnancy::before {
+     content: '';
+     position: absolute;
+     top: -50%;
+     left: -50%;
+     width: 200%;
+     height: 200%;
+     background: radial-gradient(circle, rgba(236, 165, 233, 0.1) 0%, rgba(255, 255, 255, 0) 90%);
+     z-index: -1;
+     animation: pulse 6s infinite;
+ }
+
+ /* Animação de flutuação para imagens */
+ @keyframes float {
+     0% {
+         transform: translateY(0px);
+     }
+
+     50% {
+         transform: translateY(-15px);
+     }
+
+     100% {
+         transform: translateY(0px);
+     }
+ }
+
+ .floating-img {
+     animation: float 4s ease-in-out infinite;
+ }
