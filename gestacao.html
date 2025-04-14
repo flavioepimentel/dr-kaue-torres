@@ -50,10 +50,10 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-pregnancy">
-        <div class="container">
+    <section class="hero-pregnancy custom-sticky-section">
+        <div class="container custom-sticky-container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="custom-sticky-content">
                     <h1 style="color: var(--primary-dark); font-family: var(--title-font);">
                         <span
                             style="display: block; font-size: 1.5rem; color: var(--water-green); margin-bottom: 10px;">Gestação
@@ -76,7 +76,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 d-none d-lg-block">
+                <div class="custom-sticky-image-hero">
                     <img src="img/ld-pg-gestacao/hero.webp"
                         alt="Mulher grávida feliz abraçando sua barriga, com expressão serena e radiante"
                         class="img-fluid floating-img">
@@ -143,47 +143,6 @@
     </section>
 
     <!-- Seção da Solução -->
-    <!-- <section class="section " style="background-color: var(--soft-pink);">
-        <div class="container">
-            <div class="section-title">
-                <h2 style="color: var(--primary-dark);">A Solução Está em um Pré-natal Individualizado</h2>
-                <p>Uma gestação segura e equilibrada depende de mais do que exames de rotina. Ela exige um
-                    acompanhamento funcional, integrativo e respeitoso da mulher como um todo.</p>
-            </div>
-
-            <div class="row align-items-start position-relative">
-
-                <div class="sticky-image-wrapper">
-                    <img src="img/about/minha-pratica.webp"
-                        alt="Médico conversando com paciente grávida em consultório aconchegante, demonstrando atenção e cuidado"
-                        class="img-fluid rounded shadow">
-                </div>
-                <div class="col-lg-6">
-                    <div class="feature-card-pregnancy p-4 mb-4">
-                        <i class="fas fa-utensils card-icon"></i>
-                        <h3>Nutrição e Suplementação Personalizadas</h3>
-                        <p>Planos alimentares e protocolos de suplementação adaptados para cada fase da gestação,
-                            baseados em exames e necessidades reais do seu corpo.</p>
-                    </div>
-
-                    <div class="feature-card-pregnancy p-4 mb-4">
-                        <i class="fas fa-chart-line card-icon"></i>
-                        <h3>Equilíbrio Metabólico e Controle de Doenças</h3>
-                        <p>Gestantes com obesidade, resistência à insulina, hipotireoidismo ou outras condições
-                            crônicas
-                            precisam de um plano específico para reduzir riscos.</p>
-                    </div>
-
-                    <div class="feature-card-pregnancy p-4 mb-4">
-                        <i class="fas fa-spa card-icon"></i>
-                        <h3>Estilo de Vida Saudável e Consciente</h3>
-                        <p>Atividade física segura, controle do estresse, qualidade do sono e bem-estar físico e
-                            emocional.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <section class="section custom-sticky-section" style="background-color: var(--soft-pink);">
         <div class="container">
             <div class="section-title">
@@ -225,99 +184,6 @@
             </div>
         </div>
     </section>
-
-    <style>
-        .custom-sticky-section {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .custom-sticky-container {
-            display: flex;
-            position: relative;
-            min-height: 100vh;
-            /* Ajuste conforme necessário */
-        }
-
-        .custom-sticky-content {
-            width: 50%;
-            padding-right: 30px;
-        }
-
-        .custom-sticky-image {
-            width: 50%;
-            position: sticky;
-            align-self: flex-start;
-            top: 100px;
-            /* Ajuste para altura da navbar */
-            height: calc(100vh - 100px);
-            /* Ajuste conforme top */
-            padding-left: 30px;
-        }
-
-        .custom-sticky-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        @media (max-width: 992px) {
-            .custom-sticky-container {
-                flex-direction: column;
-                min-height: auto;
-            }
-
-            .custom-sticky-content,
-            .custom-sticky-image {
-                width: 100%;
-                padding: 0;
-            }
-
-            .custom-sticky-image {
-                position: static;
-                height: auto;
-                margin-bottom: 30px;
-            }
-        }
-    </style>
-
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Ajuste dinâmico para altura da navbar
-            const navbar = document.querySelector('header');
-            const stickyImage = document.querySelector('.custom-sticky-image');
-
-            if (navbar && stickyImage) {
-                const updateStickyPosition = () => {
-                    const navbarHeight = navbar.offsetHeight;
-                    stickyImage.style.top = `${navbarHeight + 20}px`;
-                    stickyImage.style.height = `calc(100vh - ${navbarHeight + 20}px)`;
-                };
-
-                updateStickyPosition();
-                window.addEventListener('resize', updateStickyPosition);
-            }
-
-            // Controle de posição durante o scroll
-            const section = document.querySelector('.custom-sticky-section');
-            const content = document.querySelector('.custom-sticky-content');
-
-            if (section && content) {
-                window.addEventListener('scroll', function () {
-                    const sectionBottom = section.offsetTop + section.offsetHeight;
-                    const scrollPosition = window.scrollY + window.innerHeight;
-
-                    if (scrollPosition > sectionBottom) {
-                        const diff = scrollPosition - sectionBottom;
-                        stickyImage.style.transform = `translateY(${diff}px)`;
-                    } else {
-                        stickyImage.style.transform = 'translateY(0)';
-                    }
-                });
-            }
-        });
-    </script> -->
     <!-- Seção Parto Humanizado -->
     <section class="section bg-light custom-sticky-section">
         <div class="container">
@@ -372,74 +238,6 @@
             </div>
         </div>
     </section>
-
-    <style>
-        /* Estilos para a seção Parto Humanizado */
-        .humanized-image-wrapper {
-
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .humanized-image-wrapper img {
-            transition: transform 0.3s ease;
-        }
-
-        .humanized-image-wrapper:hover img {
-            transform: scale(1.03);
-        }
-
-        .humanized-content {
-            padding: 0 15px;
-        }
-
-        /* Responsividade */
-        @media (max-width: 992px) {
-            .humanized-content {
-                padding: 0;
-                margin-top: 30px;
-            }
-
-            .humanized-image-wrapper {
-                max-width: 100%;
-                margin: 0 auto;
-
-            }
-
-            .order-lg-1,
-            .order-lg-2 {
-                order: 0 !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .humanized-image-wrapper {
-                max-width: 80%;
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .humanized-image-wrapper {
-                max-width: 100%;
-            }
-
-            .d-flex {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .d-flex i {
-                margin-bottom: 10px;
-                margin-right: 0;
-            }
-        }
-    </style>
-
     <!-- Timeline da Gestação -->
     <section class="section" style="background-color: var(--happy-yellow);">
         <div class="container">

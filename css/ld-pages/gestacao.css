@@ -70,6 +70,132 @@
      /* Espaço abaixo da imagem */
  }
 
+ .custom-sticky-section {
+     position: relative;
+     overflow: hidden;
+ }
+
+ .custom-sticky-container {
+     display: flex;
+     position: relative;
+     min-height: 100vh;
+     /* Ajuste conforme necessário */
+ }
+
+ .custom-sticky-content {
+     width: 50%;
+     padding-right: 30px;
+ }
+
+ .custom-sticky-image {
+     width: 50%;
+     position: sticky;
+     align-self: flex-start;
+     top: 100px;
+     /* Ajuste para altura da navbar */
+     height: calc(100vh - 100px);
+     /* Ajuste conforme top */
+     padding-left: 30px;
+ }
+
+ .custom-sticky-image-hero {
+     width: 50%;
+     position: sticky;
+     align-self: flex-start;
+     padding-left: 30px;
+ }
+
+ .custom-sticky-image img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center;
+ }
+
+ @media (max-width: 992px) {
+     .custom-sticky-container {
+         flex-direction: column;
+         min-height: auto;
+     }
+
+     .custom-sticky-content,
+     .custom-sticky-image {
+         width: 100%;
+         padding: 0;
+     }
+
+     .custom-sticky-image {
+         position: static;
+         height: auto;
+         margin-bottom: 30px;
+     }
+ }
+
+ /* Estilos para a seção Parto Humanizado */
+ .humanized-image-wrapper {
+
+     position: relative;
+     overflow: hidden;
+     border-radius: 8px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ .humanized-image-wrapper img {
+     transition: transform 0.3s ease;
+ }
+
+ .humanized-image-wrapper:hover img {
+     transform: scale(1.03);
+ }
+
+ .humanized-content {
+     padding: 0 15px;
+ }
+
+ /* Responsividade */
+ @media (max-width: 992px) {
+     .humanized-content {
+         padding: 0;
+         margin-top: 30px;
+     }
+
+     .humanized-image-wrapper {
+         max-width: 100%;
+         margin: 0 auto;
+
+     }
+
+     .order-lg-1,
+     .order-lg-2 {
+         order: 0 !important;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .humanized-image-wrapper {
+         max-width: 80%;
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+     }
+ }
+
+ @media (max-width: 576px) {
+     .humanized-image-wrapper {
+         max-width: 100%;
+     }
+
+     .d-flex {
+         flex-direction: column;
+         align-items: flex-start;
+     }
+
+     .d-flex i {
+         margin-bottom: 10px;
+         margin-right: 0;
+     }
+ }
+
  @media (max-width: 992px) {
      .sticky-section {
          display: flex;
