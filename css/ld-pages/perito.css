@@ -3,7 +3,7 @@
 
 @import url("../material-design-iconic-font.css");
 @import url("../material-design-iconic-font.min.css");
-@import url("footer.css");
+@import url("../shortcode/footer.css");
 
 
 :root {
@@ -419,6 +419,12 @@ header {
 /*----------------------------------------*/
 /*  10. Testimonial Area
 /*----------------------------------------*/
+
+.client-area {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .client-area .section-title p {
     margin-bottom: 5px;
 }
@@ -481,7 +487,6 @@ header {
 
 /* Estatísticas */
 .stats-section {
-    margin-top: 50px;
     position: relative;
     padding: 100px 0;
     color: white;
