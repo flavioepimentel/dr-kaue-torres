@@ -425,6 +425,10 @@ header {
     margin-bottom: 50px;
 }
 
+.client-area .container {
+    width: 100% !important;
+}
+
 .client-area .section-title p {
     margin-bottom: 5px;
 }
@@ -433,9 +437,10 @@ header {
     background: #D89D55 none repeat scroll 0 0;
     color: #FFf;
     margin: 50px 85px;
-    padding: 48px 105px;
+    padding: 10%;
     position: relative;
     text-align: center;
+    width: 100%;
 }
 
 .single-testimonial i {
@@ -483,6 +488,19 @@ header {
     padding-top: 15px;
     margin-top: 38px;
 
+}
+
+@media (max-width: 696px) {
+    .single-testimonial i {
+        visibility: hidden;
+        display: none;
+    }
+
+    .slick-initialized .single-testimonial,
+    .card-block-testimonial,
+    .client-area .container {
+        width: 100%;
+    }
 }
 
 /* Estatísticas */
@@ -731,6 +749,12 @@ header {
 
     .order-lg-2 {
         order: 2;
+    }
+
+
+    .div-profile-img {
+        width: 80%;
+        align-items: center;
     }
 }
 
