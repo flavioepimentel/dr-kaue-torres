@@ -19,9 +19,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="css/slick.css"> -->
-
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <style>
+        @import url("css/material-design-iconic-font.css");
+        @import url("css/material-design-iconic-font.min.css");
+        @import url("css/shortcode/footer.css");
+
         :root {
             --primary: #D89D55;
             --primary-light: #E5BA86;
@@ -371,10 +377,12 @@
             background-color: var(--bg-light);
         }
 
+
         .testimonial-slider {
             max-width: 800px;
             margin: 0 auto;
         }
+
 
         .testimonial-card {
             background-color: var(--bg);
@@ -382,6 +390,7 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             text-align: center;
+            position: relative;
             margin: 20px;
         }
 
@@ -402,6 +411,8 @@
             font-weight: 600;
             color: var(--secondary-dark);
         }
+
+
 
         /* Sobre o Dr. */
         .about-dr {
@@ -494,6 +505,23 @@
             transform: scale(1.1);
         }
 
+        /* Mapa */
+        .contact-map-size {
+            margin-bottom: 50px;
+            width: 100%;
+            height: 380px;
+        }
+
+        .map-area {
+            z-index: 1
+        }
+
+
+        /* Footer */
+        .bg-3 {
+            background-position: 55% bottom;
+        }
+
         @keyframes pulse {
             0% {
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
@@ -507,6 +535,7 @@
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
             }
         }
+
 
         /* Responsividade */
         @media (max-width: 768px) {
@@ -539,6 +568,14 @@
                 width: 50px;
                 height: 50px;
                 font-size: 25px;
+            }
+
+        }
+
+        @media (max-width: 411px) {
+            .header-container {
+                justify-content: center;
+                align-items: center;
             }
         }
     </style>
@@ -840,6 +877,20 @@
         </div>
     </section>
 
+    <!-- Start of Map Area -->
+    <div class="map-area">
+        <!-- google-map-area start -->
+        <div class="google-map-area">
+            <!--  Map Section -->
+            <div id="contacts" class="map-area">
+                <iframe class="contact-map-size"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.4232633328243!2d-48.174435124722876!3d-21.76387378007591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f1be6eee3497%3A0xc1986865575fe58c!2sHumaniza%20Espa%C3%A7o%20Terap%C3%AAutico!5e0!3m2!1spt-BR!2sbr!4v1740514564886!5m2!1spt-BR!2sbr"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- End of Map Area -->
+
     <!-- WhatsApp Flutuante -->
     <div class="whatsapp-float">
         <a href="https://api.whatsapp.com/send?phone=5516992341205" class="whatsapp-float-btn" target="_blank"
@@ -847,6 +898,76 @@
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+
+    <!-- Footer Area Start -->
+    <footer class="footer-area bg-gray">
+        <div class="footer-widget-area bg-3 pt-98 pb-90 fix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <a href="index.html"><img style="width:60%; margin-bottom: 8px;" src="img/logo/logo.webp"
+                                    alt="Dr. Kauê Torres"></a>
+                            <p>Cuidado especializado para todas as fases da sua vida.</p>
+                            <ul>
+                                <li><i class="zmdi zmdi-email"></i> contato.kauetorres@gmail.com</li>
+                                <li><i class="zmdi zmdi-phone"></i> (16) 99234-1205</li>
+                                <li><i class="zmdi zmdi-home"></i> Av. Armando Corrêa de Siqueira, 1104 - Vila
+                                    Harmonia,
+                                    Araraquara - SP, 14802-580</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Horário de Atendimento</h3>
+                            <ul>
+                                <li>Segunda a Sexta: 08:00 - 18:00</li>
+                                <li>Sábado: 08:00 - 12:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Redes Sociais</h3>
+                            <div class="social-links mt-3">
+                                <a href="https://www.instagram.com/dr.kauetorres?igsh=MTl1aTZhNHd2aTFtOQ=="
+                                    target="_blank" class="mr-3" style="color: var(--primary); font-size: 1.5rem;"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/dr-kau%C3%AA-torres-055277282/" target="_blank"
+                                    class="mr-3" style="color: var(--primary); font-size: 1.5rem;"><i
+                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/dr-kau%C3%AA-torres-055277282/" target="_blank"
+                                    class="mr-3" style="color: var(--primary); font-size: 1.5rem;"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a href="https://www.youtube.com/@drkauetorres" target="_blank"
+                                    style="color: var(--primary); font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.linkedin.com/in/dr-kau%C3%AA-torres-055277282/" target="_blank"
+                                    class="mr-3" style="color: var(--primary); font-size: 1.5rem;"><i
+                                        class="fab fa-mail"></i></a>
+                                <a href="https://www.linkedin.com/in/dr-kau%C3%AA-torres-055277282/" target="_blank"
+                                    class="mr-3" style="color: var(--primary); font-size: 1.5rem;"><i
+                                        class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-text-area fix bg-coffee ptb-18">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-text text-center">
+                            <span>Copyright &copy; <a href="">Dr.
+                                    Kauê Torres</a> 2025.
+                                Todos os direitos reservados.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -889,20 +1010,25 @@
 
         observer.observe(document.querySelector('.stats-section'));
 
-        // Configuração do slider de depoimentos
+    </script>
+    <script>
         $(document).ready(function () {
             $('.testimonial-slider').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1,
-                adaptiveHeight: true,
                 autoplay: true,
-                autoplaySpeed: 5000,
-                arrows: false
+                autoplaySpeed: 4000,
+                dots: false,
+                arrows: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: false
             });
         });
     </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/slick.min.js"></script>
 
 </body>
