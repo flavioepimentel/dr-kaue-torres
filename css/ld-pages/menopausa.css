@@ -89,6 +89,60 @@ header {
     width: auto;
 }
 
+/* Botões */
+.banner-btn {
+    background: transparent;
+    color: var(--text);
+    display: inline-block;
+    border: 1px solid var(--primary);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 36px;
+    overflow: hidden;
+    padding: 0 30px;
+    border-radius: 25px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.banner-btn::after {
+    content: attr(data-text);
+    color: var(--primary-dark);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: translate(-30%, 0);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.banner-btn span {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.banner-btn:hover {
+    background: rgba(216, 157, 85, 0.5);
+    color: var(--primary-dark);
+}
+
+.banner-btn:hover>span {
+    opacity: 0;
+    transform: translate(0, 40px);
+}
+
+.banner-btn:hover::after {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 /* Hero Section */
 
 .hero {
@@ -249,7 +303,7 @@ header {
 
 .step-card {
     background: white;
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
@@ -259,6 +313,10 @@ header {
 .step-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.step-card h3 {
+    font-size: 1.35rem;
 }
 
 .step-number {
@@ -394,6 +452,17 @@ header {
     margin: 0 auto 30px;
 }
 
+/* Mapa */
+.contact-map-size {
+    margin-bottom: 50px;
+    width: 100%;
+    height: 380px;
+}
+
+.map-area {
+    z-index: 1
+}
+
 /* WhatsApp Flutuante */
 .whatsapp-float {
     position: fixed;
@@ -446,6 +515,16 @@ header {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-contact-container {
+        margin-top: 10px;
+    }
+
     .section {
         padding: 70px 0;
     }
