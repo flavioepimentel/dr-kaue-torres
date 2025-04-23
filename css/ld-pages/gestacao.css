@@ -152,6 +152,17 @@
      padding: 0 15px;
  }
 
+ /* Mapa */
+ .contact-map-size {
+     margin-bottom: 50px;
+     width: 100%;
+     height: 380px;
+ }
+
+ .map-area {
+     z-index: 1
+ }
+
  /* Responsividade */
  @media (max-width: 992px) {
      .humanized-content {
