@@ -440,6 +440,10 @@ header {
     margin-bottom: 5px;
 }
 
+.client-area {
+    margin-bottom: 100px;
+}
+
 .client-area .container {
     width: 100% !important;
 }
