@@ -844,17 +844,20 @@
 
 .single-testimonial {
     background: #D89D55 none repeat scroll 0 0;
-    padding: 48px 105px;
-    border-radius: 10px;
+    padding: 4.68vw 10.25390625vw;
+    border-radius: 0.9765625vw;
     color: #FFf;
     text-align: center;
     position: relative;
-    margin: 20px;
-
+    margin: 1.91315vw;
+    -webkit-border-radius: 0.9765625vw;
+    -moz-border-radius: 0.9765625vw;
+    -ms-border-radius: 0.9765625vw;
+    -o-border-radius: 0.9765625vw;
 }
 
 .testimonial-slider {
-    max-width: 800px;
+    max-width: 78.12vw;
     margin: 0 auto;
 }
 
@@ -865,11 +868,11 @@
     border-radius: 50%;
     background: #D89D55;
     box-shadow: 0 0 5px 0px black;
-    left: -45px;
-    top: -45px;
+    left: -4.39453125vw;
+    top: -4.39453125vw;
     content: "";
-    font-size: 70px;
-    line-height: 120px;
+    font-size: 6.8359375vw;
+    line-height: 11.71875vw;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -877,7 +880,7 @@
 }
 
 .single-testimonial p {
-    margin-bottom: 25px;
+    margin-bottom: 2.44140625vw;
 }
 
 .single-testimonial h6 {
@@ -902,10 +905,88 @@
 }
 
 .card-block-testimonial {
-    padding-top: 15px;
-    margin-top: 38px;
+    padding-top: 1.46484375vw;
+    margin-top: 3.7109375vw;
 }
 
+/* Altera a cor das setas */
+.slick-prev:before,
+.slick-next:before {
+    color: #D89D55;
+    /* Vermelho - altere para a cor desejada */
+    font-size: 4vw;
+    /* Tamanho do ícone */
+    opacity: 1;
+    /* Remove transparência padrão */
+}
+
+/* Posicionamento das setas */
+.slick-prev {
+    left: 1vw;
+    /* Ajuste conforme necessário */
+}
+
+.slick-next {
+    right: 1vw;
+    /* Ajuste conforme necessário */
+}
+
+.custom-prev-arrow,
+.custom-next-arrow {
+    color: #D89D55;
+    /*Cordotexto*/
+    border-radius: 50%;
+    /*Bordaarredondada*/
+    width: 8vw;
+    height: 8vw;
+    max-width: 50px;
+    /* Limite máximo */
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+}
+
+.slick-prev .fa,
+.slick-next .fa {
+    font-size: 24px;
+    color: #D89D55;
+}
+
+/* Ajuste para desktop */
+@media (min-width: 1200px) {
+
+    .slick-prev,
+    .slick-next {
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .single-testimonial {
+        padding: 6.25vw;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 1.5vw;
+        /* Reduz o tamanho em telas largas */
+    }
+
+
+}
 
 /*----------------------------------------*/
 /*  11. Map Area

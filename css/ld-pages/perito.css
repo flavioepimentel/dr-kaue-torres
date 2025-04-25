@@ -59,16 +59,16 @@ img {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 83.333333333333lvw;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.3888888888889vw;
 }
 
 
 /* Header */
 header {
     background-color: var(--bg);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.138889vw 0.6944444vw rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -421,8 +421,8 @@ header {
 /*----------------------------------------*/
 
 .client-area {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 3.472222vw;
+    margin-bottom: 3.472222vw;
 }
 
 .client-area .container {
@@ -430,13 +430,13 @@ header {
 }
 
 .client-area .section-title p {
-    margin-bottom: 5px;
+    margin-bottom: 0.3472222vw;
 }
 
 .single-testimonial {
     background: #D89D55 none repeat scroll 0 0;
     color: #FFf;
-    margin: 50px 85px;
+    margin: 3.472222vw 5.902777vw;
     padding: 10%;
     position: relative;
     text-align: center;
@@ -446,20 +446,24 @@ header {
 .single-testimonial i {
     color: #FFf;
     position: absolute;
-    height: 115px;
-    width: 115px;
+    height: 7.98611vw;
+    width: 7.98611vw;
     border-radius: 50%;
     background: #D89D55;
     box-shadow: 0 0 5px 0px black;
-    left: -45px;
-    top: -45px;
+    left: -3.125vw;
+    top: -3.125vw;
     content: "";
-    font-size: 70px;
-    line-height: 120px;
+    font-size: 4.861111vw;
+    line-height: 8.33333vw;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .single-testimonial p {
-    margin-bottom: 25px;
+    margin-bottom: 1.7361111vw;
     color: #FFf;
 }
 
@@ -480,13 +484,120 @@ header {
     text-align: center;
     max-width: 80%;
     margin: auto;
-    border-radius: 10px;
-
+    border-radius: 0.6944444vw;
+    -webkit-border-radius: 0.6944444vw;
+    -moz-border-radius: 0.6944444vw;
+    -ms-border-radius: 0.6944444vw;
+    -o-border-radius: 0.6944444vw;
 }
 
 .card-block-testimonial {
-    padding-top: 15px;
-    margin-top: 38px;
+    padding-top: 1.04166666vw;
+    margin-top: 2.6388889vw;
+
+}
+
+/* Altera a cor das setas */
+.slick-prev:before,
+.slick-next:before {
+    color: #D89D55;
+    /* Vermelho - altere para a cor desejada */
+    font-size: 4vw;
+    /* Tamanho do ícone */
+    opacity: 1;
+    /* Remove transparência padrão */
+}
+
+/* Posicionamento das setas */
+.slick-prev {
+    left: 1vw;
+    /* Ajuste conforme necessário */
+}
+
+.slick-next {
+    right: 1vw;
+    /* Ajuste conforme necessário */
+}
+
+button.slick-prev.slick-arrow,
+button.slick-next.slick-arrow {
+    border: none;
+}
+
+.slick-slider {
+    position: relative;
+    display: flex !important;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    /* justify-items: center; */
+}
+
+.custom-prev-arrow,
+.custom-next-arrow {
+    color: #D89D55;
+    /*Cordotexto*/
+    border: none;
+    /*Bordaarredondada*/
+    width: 8vw;
+    height: 8vw;
+    max-width: 50px;
+    /* Limite máximo */
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+}
+
+.slick-prev .fa,
+.slick-next .fa {
+    font-size: 24px;
+    color: #D89D55;
+}
+
+/* Ajuste para desktop */
+@media (min-width: 1200px) {
+
+    .slick-prev,
+    .slick-next {
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .single-testimonial {
+        padding: 6.25vw;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 1.5vw;
+        /* Reduz o tamanho em telas largas */
+    }
+
+
 
 }
 
@@ -500,6 +611,10 @@ header {
     .card-block-testimonial,
     .client-area .container {
         width: 100%;
+    }
+
+    .slick-track {
+        margin-bottom: 85px !important;
     }
 }
 
@@ -801,8 +916,7 @@ header {
     }
 
     .row {
-        margin: 0;
-        padding: 50;
+        margin: -25px;
     }
 
     .section {
