@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/ld-pages/gestacao.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script src="js/jquery.min.js"></script>
 
     <noscript>
         <link rel="stylesheet"
@@ -431,6 +434,106 @@
         </div>
     </section>
 
+    <!-- Client Area Strat -->
+    <section class="client-area pt-95 pb-25">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-xl-2 offset-lg-2">
+                    <div class="section-title text-center">
+                        <h2>Depoimentos</h2>
+                        <p>Com uma abordagem humanizada e dedicada, o Dr. Kauê tem ajudado inúmeras mulheres a
+                            cuidarem
+                            de sua saúde em todas as fases da vida. Veja o que elas têm a dizer! </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 offset-xl-1 offset-lg-1">
+                    <div class="row">
+                        <div class="testimonial-slider">
+                            <div class="col-12 card-block-testimonial">
+                                <div class="single-testimonial">
+                                    <i class="zmdi zmdi-quote"></i>
+                                    <p>"Excelente profissional, atencioso e com uma abordagem integrativa voltada
+                                        para a
+                                        promoção de saúde, fui muito bem
+                                        atendida durante minha gestação."</p>
+                                    <h6>Paula Regina Silva Freire</h6>
+                                </div>
+                            </div>
+                            <div class="col-12 card-block-testimonial">
+                                <div class="single-testimonial">
+                                    <i class="zmdi zmdi-quote"></i>
+                                    <p>Uma autoridade no âmbito da Ginecologia e Obstetrícia.
+                                        Atendimento humanizado e de excelência. </p>
+                                    <h6>Márcia de Paiva</h6>
+                                </div>
+                            </div>
+                            <div class="col-12 card-block-testimonial">
+                                <div class="single-testimonial">
+                                    <i class="zmdi zmdi-quote"></i>
+                                    <p>Dr. Kauê foi muito profissional, desde o primeiro contato, até a forma como
+                                        explicou os resultados dos exames.
+                                        Certamente sua abordagem foi muito útil durante o acompanhamento e tudo
+                                        ficou
+                                        extremamente claro. Recomendo!</p>
+                                    <h6>Frederico Purini Nardi</h6>
+                                </div>
+                            </div>
+                            <div class="col-12 card-block-testimonial">
+                                <div class="single-testimonial">
+                                    <i class="zmdi zmdi-quote"></i>
+                                    <p>Recomendo o Doutor Kauê, excelente profissional, muito receptivo e educado.
+                                    </p>
+                                    <h6>Renan Segantini da Silva Mello</h6>
+                                </div>
+                            </div>
+                            <div class="col-12 card-block-testimonial">
+                                <div class="single-testimonial">
+                                    <i class="zmdi zmdi-quote"></i>
+                                    <p>Excelente atendimento, conhecimento de nível especialista. Recomendo o Dr.
+                                        Kauê a
+                                        todos. </p>
+                                    <h6>Carlos Eduardo Peruzi</h6>
+                                </div>
+                            </div>
+
+                            <div class="col-12 card-block-testimonial">
+                                <div class="single-testimonial">
+                                    <i class="zmdi zmdi-quote"></i>
+                                    <p>Dr. Kaue, quero registrar minha gratidão ao trabalho realizado. Como
+                                        advogado, posso dizer que sua atuação junto ao
+                                        processo será de bastante valia para o êxito da demanda. Sua abordagem
+                                        técnica e científica elevou o patamar de nossa
+                                        atuação processual. </p>
+                                    <h6>Dr. Caio César</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('.testimonial-slider').slick({
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    dots: false,
+                    arrows: true,
+                    prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+                    nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    adaptiveHeight: false
+                });
+            });
+        </script>
+    </section>
+    <!-- Client Area End -->
+
     <!-- CTA Final -->
     <section class="section cta-pregnancy">
         <div class="container">
@@ -451,7 +554,7 @@
         </div>
     </section>
 
-     <!-- Start of Map Area -->
+    <!-- Start of Map Area -->
     <div class="map-area">
         <!-- google-map-area start -->
         <div class="google-map-area">
@@ -574,6 +677,12 @@
             });
         });
     </script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="js/jquery.meanmenu.js"></script>
+    <script src="js/ld-page/menopausa/slider.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/slick.min.js"></script>
 </body>
 
 </html>

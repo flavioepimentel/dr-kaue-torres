@@ -297,6 +297,236 @@
      box-shadow: 0 0 0 4px var(--primary-light);
  }
 
+ /*----------------------------------------*/
+ /*  10. Testimonial Area
+/*----------------------------------------*/
+ .client-area .section-title p {
+     margin-bottom: 5px;
+ }
+
+ .client-area .container {
+     width: 100% !important;
+     margin: 0 auto;
+ }
+
+ .single-testimonial {
+     background: #D89D55 none repeat scroll 0 0;
+     padding: 4.68vw 10.25390625vw;
+     border-radius: 0.9765625vw;
+     color: #FFf !important;
+     text-align: center;
+     position: relative;
+     margin: 0.51315vw;
+     -webkit-border-radius: 0.9765625vw;
+     -moz-border-radius: 0.9765625vw;
+     -ms-border-radius: 0.9765625vw;
+     -o-border-radius: 0.9765625vw;
+ }
+
+ .testimonial-slider {
+     max-width: 79.12vw;
+     margin: 0 auto;
+ }
+
+ .single-testimonial i {
+     color: #FFf;
+     position: absolute;
+     height: 7.98611vw;
+     width: 7.98611vw;
+     border-radius: 50%;
+     background: #D89D55;
+     box-shadow: 0 0 5px 0px black;
+     left: -3.125vw;
+     top: -3.125vw;
+     content: "";
+     font-size: 4.261111vw;
+     line-height: 8.33333vw;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+ }
+
+ .single-testimonial p {
+     margin-bottom: 2.44140625vw;
+     color: #FFf !important;
+ }
+
+ .single-testimonial h6 {
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 400;
+ }
+
+
+
+ .testimonial-slider .single-testimonial {
+     display: none;
+     /* Oculta todos os depoimentos inicialmente */
+ }
+
+ .slick-initialized .single-testimonial {
+     display: block;
+     /* Apenas o slide ativo será exibido */
+     text-align: center;
+     max-width: 80%;
+     margin: auto;
+     border-radius: 10px;
+ }
+
+
+ .card-block-testimonial {
+     padding-top: 1.46484375vw;
+     margin-top: 3.7109375vw;
+ }
+
+ /* Altera a cor das setas */
+ .slick-prev:before,
+ .slick-next:before {
+     color: #D89D55;
+     /* Vermelho - altere para a cor desejada */
+     font-size: 4vw;
+     /* Tamanho do ícone */
+     opacity: 1;
+     /* Remove transparência padrão */
+ }
+
+ /* Posicionamento das setas */
+ .slick-prev {
+     left: 1vw;
+     /* Ajuste conforme necessário */
+ }
+
+ .slick-next {
+     right: 1vw;
+     /* Ajuste conforme necessário */
+ }
+
+ .custom-prev-arrow,
+ .custom-next-arrow {
+     color: #D89D55;
+     /*Cordotexto*/
+     border-radius: 50%;
+     /*Bordaarredondada*/
+     width: 8vw;
+     height: 8vw;
+     max-width: 50px;
+     /* Limite máximo */
+     max-height: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+ }
+
+ .slick-prev,
+ .slick-next {
+     font-size: 0;
+     line-height: 0;
+ }
+
+ .slick-prev .fa,
+ .slick-next .fa {
+     font-size: 24px;
+     color: #D89D55;
+ }
+
+ .row {
+     margin: 0 -25px;
+ }
+
+ button.slick-prev.slick-arrow,
+ button.slick-next.slick-arrow {
+     border: none;
+ }
+
+
+
+
+ .slick-slider {
+     position: relative;
+     display: flex !important;
+     box-sizing: border-box;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     -webkit-touch-callout: none;
+     -khtml-user-select: none;
+     -ms-touch-action: pan-y;
+     touch-action: pan-y;
+     -webkit-tap-highlight-color: transparent;
+     align-content: center;
+     align-items: center;
+     justify-content: center;
+     /* justify-items: center; */
+ }
+
+ /* Ajuste para desktop */
+ @media (min-width: 1200px) {
+
+     .slick-prev,
+     .slick-next {
+         width: 4vw;
+         height: 4vw;
+     }
+ }
+
+ @media (min-width: 768px) {
+     .single-testimonial {
+         padding: 5.25vw;
+     }
+
+     .slick-prev:before,
+     .slick-next:before {
+         font-size: 1.5vw;
+         /* Reduz o tamanho em telas largas */
+     }
+
+
+
+
+ }
+
+ @media (max-width: 696px) {
+     .single-testimonial i {
+         visibility: hidden;
+         display: none;
+         font-size: 3.261111vw;
+     }
+
+     .single-testimonial {
+         width: 100%;
+     }
+
+     .single-testimonial p {
+
+         font-size: 3.261111vw;
+     }
+
+     .testimonial-slider {
+         width: 100%;
+
+     }
+
+     .single-testimonial,
+     .card-block-testimonial,
+     .client-area .container {
+         width: 95%;
+     }
+
+     .slick-track {
+         margin-bottom: 85px !important;
+     }
+
+     .slick-initialized .single-testimonial {
+         margin: 0 0 0 25px;
+     }
+ }
+
  /* CTA Especial */
  .cta-pregnancy {
      background: linear-gradient(135deg, var(--light-purple) 40%, var(--water-green) 80%);
