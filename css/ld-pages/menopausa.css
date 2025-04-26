@@ -667,7 +667,6 @@ button.slick-next.slick-arrow {
 
 /* Mapa */
 .contact-map-size {
-    margin-bottom: 50px;
     width: 100%;
     height: 380px;
 }
@@ -707,8 +706,52 @@ button.slick-next.slick-arrow {
     box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
 }
 
+/* Footer */
 .footer-area {
-    padding-top: 100px;
+    padding: 15px 0;
+    background-color: var(--bg-light);
+}
+
+.footer-widget-area {
+    padding: 100px 0;
+}
+
+.single-footer-widget {
+    color: #666666;
+    font-size: 14px;
+}
+
+.single-footer-widget p {
+    font-family: var(--title-font);
+    font-size: 14px;
+    line-height: 24px;
+    color: #7f7f7f;
+}
+
+.single-footer-widget ul {
+    color: #7f7f7f;
+    font-size: 14px;
+    font-family: var(--title-font);
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 0px;
+    margin-left: 0px;
+    line-height: 24px;
+}
+
+.footer-text-area {
+    background-color: var(--primary);
+    padding: 20px 0;
+    color: white;
+}
+
+.footer-text-area .container {
+    margin: 0.5px auto;
+}
+
+.footer-text span,
+.footer-text a {
+    color: white;
 }
 
 @keyframes pulse {
