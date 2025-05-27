@@ -19,8 +19,19 @@
 
     <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <link rel="stylesheet" href="css/shortcode/office.css">
+    <link rel="stylesheet" href="css/shortcode/modal.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
 
     <style>
+        @import url("./css/shortcode/shortcodes.css");
+
         :root {
             --primary: #D89D55;
             --primary-dark: #95652A;
@@ -145,15 +156,25 @@
             z-index: 1000;
         }
 
+
+
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            max-width: 1200px;
+            margin: 0 100px;
+            padding: 0 20px;
+        }
+
+        .header-logo {
+            flex: 1;
+            min-width: 200px;
         }
 
         .logo {
-            height: 50px;
+            width: auto !important;
+            max-height: 80px !important;
         }
 
         /* Hero Section */
@@ -454,7 +475,7 @@
         }
 
         .doctor-image img {
-            width: 100%;
+            width: 48%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
@@ -587,79 +608,51 @@
             border-color: var(--light);
         }
 
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--light);
-            padding: 60px 0 20px;
+        .footer-area {
+            padding: 15px 0;
+            background-color: var(--bg-light);
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+        .footer-widget-area {
+            padding: 100px 0;
         }
 
-        .footer-col h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .footer-col h3:after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--primary);
-        }
-
-        .footer-col p {
-            margin-bottom: 20px;
-        }
-
-        .footer-contact li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .footer-contact i {
-            margin-right: 15px;
-            color: var(--primary);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        .single-footer-widget {
+            color: #666666;
             font-size: 14px;
+        }
+
+        .single-footer-widget p {
+            font-family: var(--title-font);
+            font-size: 14px;
+            line-height: 24px;
+            color: #7f7f7f;
+        }
+
+        .single-footer-widget ul {
+            color: #7f7f7f;
+            font-size: 14px;
+            font-family: var(--title-font);
+            margin-bottom: 10px;
+            list-style: none;
+            padding: 0px;
+            margin-left: 0px;
+            line-height: 24px;
+        }
+
+        .footer-text-area {
+            background-color: var(--primary);
+            padding: 20px 0;
+            color: white;
+        }
+
+        .footer-text-area .container {
+            margin: 0.5px auto;
+        }
+
+        .footer-text span,
+        .footer-text a {
+            color: white;
         }
 
         /* WhatsApp Float */
@@ -757,6 +750,11 @@
         }
 
         @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                justify-content: center;
+            }
+
             .section {
                 padding: 60px 0;
             }
@@ -816,16 +814,22 @@
 </head>
 
 <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCTP7BQ7" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-container">
-                <a href="#">
-                    <img src="img/logo.svg" alt="Saúde Íntima Feminina" class="logo">
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=5516992341205" class="btn">
-                    <i class="fab fa-whatsapp"></i> Agendar Consulta
-                </a>
+        <div class="header-container">
+            <a href="index.html">
+                <img class="logo" src="img/logo/logo.webp" alt="Saúde Íntima Feminina">
+            </a>
+            <div class="header-contact">
+                <a class="banner-btn" style="white-space: nowrap; word-wrap: break-word;"
+                    data-text="Agende sua Consulta" href="https://api.whatsapp.com/send?phone=5516992341205"
+                    target="_blank"><span>Agendar
+                        Consulta</span></a>
             </div>
         </div>
     </header>
@@ -852,7 +856,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="img/hero-image.jpg"
+                    <img src="img/ld-saude-feminina/dra-paula.webp"
                         alt="Dra. Paula realizando procedimento com Laser CO₂ em ambiente acolhedor">
                 </div>
             </div>
@@ -910,7 +914,7 @@
                 <div class="treatment-grid">
                     <div class="treatment-card">
                         <div class="treatment-image">
-                            <img src="img/treatment-1.jpg"
+                            <img src="img/ld-saude-feminina/rejuvenecimento-vaginal.webp"
                                 alt="Mulher sorrindo após procedimento de rejuvenescimento vaginal">
                         </div>
                         <div class="treatment-info">
@@ -922,7 +926,8 @@
                     </div>
                     <div class="treatment-card">
                         <div class="treatment-image">
-                            <img src="img/treatment-2.jpg" alt="Dra. Paula explicando procedimento para paciente">
+                            <img src="img/about/minha-pratica.webp"
+                                alt="Dra. Paula explicando procedimento para paciente">
                         </div>
                         <div class="treatment-info">
                             <h3>Tratamento Pós-Parto</h3>
@@ -938,7 +943,7 @@
                 <div class="treatment-grid">
                     <div class="treatment-card">
                         <div class="treatment-image">
-                            <img src="img/treatment-3.jpg"
+                            <img src="img/ld-saude-feminina/incontinencia.webp"
                                 alt="Mulher praticando exercícios com confiança após tratamento">
                         </div>
                         <div class="treatment-info">
@@ -955,7 +960,8 @@
                 <div class="treatment-grid">
                     <div class="treatment-card">
                         <div class="treatment-image">
-                            <img src="img/treatment-4.jpg" alt="Mulher na menopausa feliz com resultados do tratamento">
+                            <img src="img/class/menopausa-longevidade.webp"
+                                alt="Mulher na menopausa feliz com resultados do tratamento">
                         </div>
                         <div class="treatment-info">
                             <h3>Atrofia Vulvovaginal</h3>
@@ -966,7 +972,8 @@
                     </div>
                     <div class="treatment-card">
                         <div class="treatment-image">
-                            <img src="img/treatment-5.jpg" alt="Mulher na menopausa com expressão de alívio">
+                            <img src="img/ld-saude-feminina/exercicio.webp"
+                                alt="Mulher na menopausa com expressão de alívio">
                         </div>
                         <div class="treatment-info">
                             <h3>Preventivo da Atrofia na Menopausa</h3>
@@ -982,7 +989,8 @@
                 <div class="treatment-grid">
                     <div class="treatment-card">
                         <div class="treatment-image">
-                            <img src="img/treatment-6.jpg" alt="Mulher confiante após procedimento de ninfoplastia">
+                            <img src="img/ld-saude-feminina/ninfoplastia.webp"
+                                alt="Mulher confiante após procedimento de ninfoplastia">
                         </div>
                         <div class="treatment-info">
                             <h3>Ninfoplastia</h3>
@@ -993,7 +1001,8 @@
                     </div>
                     <div class="treatment-card">
                         <div class="treatment-image">
-                            <img src="img/treatment-7.jpg" alt="Procedimento de clitoropexia sendo realizado">
+                            <img src="img/ld-saude-feminina/clitoropexia.webp"
+                                alt="Procedimento de clitoropexia sendo realizado">
                         </div>
                         <div class="treatment-info">
                             <h3>Clitoropexia</h3>
@@ -1022,7 +1031,6 @@
                         afetava minha qualidade de vida. O tratamento com Laser CO₂ foi incrível! Já nas primeiras
                         sessões, percebi melhora na lubrificação e no conforto diário. Me sinto renovada!"</p>
                     <div class="testimonial-author">
-                        <img src="img/testimonial-1.jpg" alt="Amanda S., paciente satisfeita">
                         <div class="author-info">
                             <h4>Amanda S., 42 anos</h4>
                             <p>Tratamento de Atrofia Vulvovaginal</p>
@@ -1036,7 +1044,6 @@
                         relações. A ninfoplastia mudou completamente minha autoestima! O procedimento foi tranquilo, a
                         recuperação rápida e o resultado ficou perfeito, super natural."</p>
                     <div class="testimonial-author">
-                        <img src="img/testimonial-2.jpg" alt="Beatriz M., paciente satisfeita">
                         <div class="author-info">
                             <h4>Beatriz M., 29 anos</h4>
                             <p>Ninfoplastia Funcional</p>
@@ -1050,7 +1057,6 @@
                         assoalho pélvico com o tratamento foi libertador! Hoje faço minhas atividades sem preocupações.
                         Sou eternamente grata à Dra. Paula e sua equipe!"</p>
                     <div class="testimonial-author">
-                        <img src="img/testimonial-3.jpg" alt="Camila T., paciente satisfeita">
                         <div class="author-info">
                             <h4>Camila T., 50 anos</h4>
                             <p>Incontinência Urinária</p>
@@ -1073,7 +1079,7 @@
             <div class="doctors-grid">
                 <div class="doctor-card">
                     <div class="doctor-image">
-                        <img src="img/dra-paula.jpg"
+                        <img src="img/ld-saude-feminina/dra-paula.webp"
                             alt="Dra. Paula Regina Silva Freire, especialista em Ginecologia e Obstetrícia">
                     </div>
                     <div class="doctor-info">
@@ -1091,11 +1097,11 @@
 
                 <div class="doctor-card">
                     <div class="doctor-image">
-                        <img src="img/dr-kaue.jpg"
-                            alt="Dr. Kauê Torres Topoljian, especialista em Ginecologia e Obstetrícia">
+                        <img src="img/ld-saude-feminina/dr-kaue.webp"
+                            alt="Dr. Kauê Torres, especialista em Ginecologia e Obstetrícia">
                     </div>
                     <div class="doctor-info">
-                        <h3>Dr. Kauê Torres Topoljian</h3>
+                        <h3>Dr. Kauê Torres</h3>
                         <p>CRM-SP 183.632 | RQE 91.438</p>
                         <ul>
                             <li>Médico formado pela FAMECA</li>
@@ -1192,53 +1198,70 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="img/logo-white.svg" alt="Saúde Íntima Feminina" class="logo"
-                        style="height: 50px; margin-bottom: 20px;">
-                    <p>Cuidado especializado para todas as fases da sua vida íntima, com tecnologia avançada e abordagem
-                        humanizada.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+    <footer class="footer-area bg-gray">
+        <div class="footer-widget-area bg-3 pt-98 pb-90 fix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <a href="index.html"><img style="width:60%; margin-bottom: 8px;" src="img/logo/logo.webp"
+                                    alt="Dr. Kauê Torres"></a>
+                            <p>Cuidado especializado para todas as fases da sua vida.</p>
+                            <ul>
+                                <li><i class="zmdi zmdi-email"></i> clinica.drkauetorres@gmail.com</li>
+                                <li><i class="zmdi zmdi-phone"></i> (16) 99234-1205</li>
+                                <li><i class="zmdi zmdi-home"></i> Av. Armando Corrêa de Siqueira, 1104 - Vila
+                                    Harmonia,
+                                    Araraquara - SP, 14802-580</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Horário de Atendimento</h3>
+                            <ul>
+                                <li>Segunda a Sexta: 08:00 - 18:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <h3>Redes Sociais</h3>
+                            <div class="social-links mt-3">
+                                <a href="https://www.instagram.com/dr.kauetorres?igsh=MTl1aTZhNHd2aTFtOQ=="
+                                    target="_blank" class="mr-3" style="color: var(--primary); font-size: 1.5rem;"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/dr-kau%C3%AA-torres-055277282/" target="_blank"
+                                    class="mr-3" style="color: var(--primary); font-size: 1.5rem;"><i
+                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/dr-kau%C3%AA-torres-055277282/" target="_blank"
+                                    class="mr-3" style="color: var(--primary); font-size: 1.5rem;"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a href="https://www.youtube.com/@drkauetorres" target="_blank"
+                                    style="color: var(--primary); font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.linkedin.com/in/dr-kau%C3%AA-torres-055277282/" target="_blank"
+                                    class="mr-3" style="color: var(--primary); font-size: 1.5rem;"><i
+                                        class="fab fa-mail"></i></a>
+                                <a href="https://www.linkedin.com/in/dr-kau%C3%AA-torres-055277282/" target="_blank"
+                                    class="mr-3" style="color: var(--primary); font-size: 1.5rem;"><i
+                                        class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="footer-col">
-                    <h3>Tratamentos</h3>
-                    <ul>
-                        <li><a href="#">Rejuvenescimento Vaginal</a></li>
-                        <li><a href="#">Incontinência Urinária</a></li>
-                        <li><a href="#">Atrofia Vulvovaginal</a></li>
-                        <li><a href="#">Ninfoplastia</a></li>
-                        <li><a href="#">Clitoropexia</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Contato</h3>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Av. Armando Corrêa de Siqueira, 1104 - Vila Harmonia, Araraquara - SP</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <span>(16) 99234-1205</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>clinica.drkauetorres@gmail.com</span>
-                        </li>
-                    </ul>
-                </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2023 Saúde Íntima Feminina. Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-text-area fix bg-coffee ptb-18">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-text text-center">
+                            <span>Copyright &copy; <a href="">Dr.
+                                    Kauê Torres</a> 2025.
+                                Todos os direitos reservados.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
